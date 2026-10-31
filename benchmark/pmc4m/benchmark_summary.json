@@ -1,0 +1,49 @@
+{
+  "n_documents": 4044247,
+  "families": {
+    "clinical": 2539,
+    "multihop": 0,
+    "mesh": 30684
+  },
+  "families_with_combined": {
+    "clinical": 2539,
+    "multihop": 0,
+    "mesh": 30684,
+    "combined": 2539
+  },
+  "gold_sizes": {
+    "clinical_mean": 87.1,
+    "multihop_mean": 0.0,
+    "mesh_mean": 99.6
+  },
+  "categories": {
+    "clinical": [
+      "anatomy",
+      "biological-sciences",
+      "diseases",
+      "drugs-and-therapeutics",
+      "organisms",
+      "phenomena-and-processes",
+      "psychiatry-and-psychology",
+      "tree-unknown"
+    ],
+    "multihop": [],
+    "mesh": [
+      "anatomy",
+      "biological-sciences",
+      "diseases",
+      "drugs-and-therapeutics",
+      "organisms",
+      "phenomena-and-processes",
+      "psychiatry-and-psychology",
+      "tree-unknown"
+    ]
+  },
+  "paths": {
+    "clinical": "data/pmcexpanded/runs/benchmark/qrels_clinical.json",
+    "multihop": "data/pmcexpanded/runs/benchmark/qrels_multihop.json",
+    "mesh": "data/pmcexpanded/runs/benchmark/qrels_mesh.json",
+    "combined": "data/pmcexpanded/runs/benchmark/qrels_combined.json"
+  },
+  "seed": 7
+}

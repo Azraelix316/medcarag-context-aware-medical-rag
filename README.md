@@ -17,7 +17,7 @@ This repository holds the code, benchmark, results and paper for:
 | Section-typed index of PubMed abstracts (**PubMed-20M**) | 20.5M abstracts, 48.3M chunks | CC BY 4.0 (derived indexes) |
 | Two smaller full-text indexes (PMC-RCT, PMC-300K) | 555K and 300K articles | CC BY 4.0 |
 | BM25 (segmented, exact), document vectors, chunk vectors (PubMed-20M), a same-article section graph | see `paper/` Table 1; PMC-4M is 422 GB (posted for download with the final paper; rebuildable with the builders) | CC BY 4.0 |
-| MeSH-derived clinical benchmark: queries, qrels, PMID-to-MeSH mapping | 2,539 PMC-4M queries | CC0 |
+| MeSH-derived clinical benchmark: queries, qrels, PMID-to-MeSH mapping, PMID/PMCID manifests | `benchmark/` (large files on the GitHub release); 2,539 PMC-4M and 2,459 PubMed-20M queries | CC0 |
 | **Readiness** metrics: does the retrieved evidence state a rate, a population, a caveat, a benefit? | `medrag/eval/readiness.py` | Apache-2.0 |
 | Per-query result rows, significance tests, 2,700 generated answers | `docs/runs/` | CC0 |
 | Multi-host build tools for indexes larger than RAM | `medrag/index/`, `scripts/` | Apache-2.0 |
