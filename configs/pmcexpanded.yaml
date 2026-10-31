@@ -1,0 +1,43 @@
+paths:
+  # Every PMC Open Access article crawled: both PMC roots merged by
+  # scripts/merge_crawl_roots.py, 4,044,247 documents, 4,044,247 unique ids, 814
+  # shards (handoff.md). pmcsample is a 300,000-document stride sample of it.
+  #
+  # Indexed without chunk embeddings: the six full-text ablation arms use the store,
+  # BM25 segments, the dependency graph and page vectors only (run_mode_ablation.py
+  # loads with with_dense=False), and the ~118M chunk rows would take ~109 GPU-hours
+  # to embed. Store built by scripts/parallel_store.py.
+  data_root: data/pmcexpanded
+  index_dir: data/pmcexpanded/index
+
+acquire:
+  # Already crawled. Recorded so the chunker and indexer agree on the source field.
+  source: pmc
+  query: '"open access"[filter]'
+  lang: english
+
+chunk:
+  # Identical to pmcsample's and pmcmerged's, so the three full-text indexes chunk
+  # the same way and a section kind means the same thing in each.
+  strategy: section
+  target_tokens: 320
+  max_tokens: 512
+  overlap_tokens: 64
+  min_tokens: 48
+
+embed:
+  # Same encoder as every other index: used here for page vectors and query
+  # embedding only.
+  model_name: BAAI/bge-small-en-v1.5
+  query_prefix: "Represent this sentence for searching relevant passages: "
+  pooling: cls
+  normalize: true
+  batch_size: 256
+  block_size: 20000
+  max_seq_length: 320
+  device: auto
+  fp16: true
+  dim: 384
+
+rerank:
+  enabled: false

@@ -1,0 +1,333 @@
+{
+  "n_queries": 2000,
+  "section_composition": {
+    "sparse": {
+      "share_of_gold_passages_by_kind": {
+        "(none)": 0.2383,
+        "background": 0.272,
+        "methods": 0.1556,
+        "discussion": 0.1366,
+        "results": 0.1562,
+        "conclusions": 0.0403,
+        "references": 0.0009
+      },
+      "counts_by_kind": {
+        "methods": 517,
+        "results": 519,
+        "background": 904,
+        "(none)": 792,
+        "discussion": 454,
+        "conclusions": 134,
+        "references": 3
+      }
+    },
+    "bleed": {
+      "share_of_gold_passages_by_kind": {
+        "(none)": 0.2588,
+        "background": 0.2437,
+        "methods": 0.146,
+        "discussion": 0.1426,
+        "results": 0.1607,
+        "conclusions": 0.0476,
+        "references": 0.0005
+      },
+      "counts_by_kind": {
+        "methods": 558,
+        "background": 931,
+        "results": 614,
+        "discussion": 545,
+        "(none)": 989,
+        "conclusions": 182,
+        "references": 2
+      }
+    },
+    "context": {
+      "share_of_gold_passages_by_kind": {
+        "(none)": 0.202,
+        "background": 0.2265,
+        "methods": 0.1652,
+        "discussion": 0.1581,
+        "results": 0.1384,
+        "conclusions": 0.1091,
+        "references": 0.0007
+      },
+      "counts_by_kind": {
+        "methods": 960,
+        "conclusions": 634,
+        "results": 804,
+        "background": 1316,
+        "(none)": 1174,
+        "discussion": 919,
+        "references": 4
+      }
+    },
+    "bleedctx": {
+      "share_of_gold_passages_by_kind": {
+        "(none)": 0.2319,
+        "background": 0.2121,
+        "methods": 0.1627,
+        "discussion": 0.1527,
+        "results": 0.1406,
+        "conclusions": 0.0995,
+        "references": 0.0005
+      },
+      "counts_by_kind": {
+        "methods": 1009,
+        "conclusions": 617,
+        "results": 872,
+        "background": 1315,
+        "discussion": 947,
+        "(none)": 1438,
+        "references": 3
+      }
+    },
+    "page": {
+      "share_of_gold_passages_by_kind": {
+        "(none)": 0.2718,
+        "background": 0.2587,
+        "methods": 0.1451,
+        "discussion": 0.1344,
+        "results": 0.1389,
+        "conclusions": 0.0503,
+        "references": 0.0008
+      },
+      "counts_by_kind": {
+        "methods": 704,
+        "(none)": 1319,
+        "results": 674,
+        "background": 1255,
+        "discussion": 652,
+        "conclusions": 244,
+        "references": 4
+      }
+    },
+    "pagectx": {
+      "share_of_gold_passages_by_kind": {
+        "(none)": 0.2427,
+        "background": 0.2269,
+        "methods": 0.1497,
+        "discussion": 0.1538,
+        "results": 0.1232,
+        "conclusions": 0.1031,
+        "references": 0.0006
+      },
+      "counts_by_kind": {
+        "methods": 1229,
+        "(none)": 1993,
+        "results": 1012,
+        "conclusions": 847,
+        "background": 1863,
+        "discussion": 1263,
+        "references": 5
+      }
+    }
+  },
+  "top_k": 10,
+  "index_dir": "data/pmcmerged/index",
+  "page_index_documents": 554069,
+  "readiness": {
+    "sparse": {
+      "n_queries": 2000,
+      "n_found_gold": 1164,
+      "n_ready": 399,
+      "n_quantified": 507,
+      "n_with_population": 663,
+      "n_with_caveat": 212,
+      "n_with_benefit": 269,
+      "readiness": 0.1995,
+      "quantification_rate": 0.2535,
+      "population_rate": 0.3315,
+      "caveat_rate": 0.106,
+      "benefit_rate": 0.1345,
+      "bare_rate": 0.3285
+    },
+    "bleed": {
+      "n_queries": 2000,
+      "n_found_gold": 1085,
+      "n_ready": 411,
+      "n_quantified": 518,
+      "n_with_population": 651,
+      "n_with_caveat": 250,
+      "n_with_benefit": 267,
+      "readiness": 0.2055,
+      "quantification_rate": 0.259,
+      "population_rate": 0.3255,
+      "caveat_rate": 0.125,
+      "benefit_rate": 0.1335,
+      "bare_rate": 0.2835
+    },
+    "context": {
+      "n_queries": 2000,
+      "n_found_gold": 1164,
+      "n_ready": 590,
+      "n_quantified": 682,
+      "n_with_population": 842,
+      "n_with_caveat": 374,
+      "n_with_benefit": 441,
+      "readiness": 0.295,
+      "quantification_rate": 0.341,
+      "population_rate": 0.421,
+      "caveat_rate": 0.187,
+      "benefit_rate": 0.2205,
+      "bare_rate": 0.241
+    },
+    "bleedctx": {
+      "n_queries": 2000,
+      "n_found_gold": 1085,
+      "n_ready": 567,
+      "n_quantified": 661,
+      "n_with_population": 792,
+      "n_with_caveat": 375,
+      "n_with_benefit": 424,
+      "readiness": 0.2835,
+      "quantification_rate": 0.3305,
+      "population_rate": 0.396,
+      "caveat_rate": 0.1875,
+      "benefit_rate": 0.212,
+      "bare_rate": 0.212
+    },
+    "page": {
+      "n_queries": 2000,
+      "n_found_gold": 1293,
+      "n_ready": 500,
+      "n_quantified": 634,
+      "n_with_population": 771,
+      "n_with_caveat": 293,
+      "n_with_benefit": 328,
+      "readiness": 0.25,
+      "quantification_rate": 0.317,
+      "population_rate": 0.3855,
+      "caveat_rate": 0.1465,
+      "benefit_rate": 0.164,
+      "bare_rate": 0.3295
+    },
+    "pagectx": {
+      "n_queries": 2000,
+      "n_found_gold": 1293,
+      "n_ready": 709,
+      "n_quantified": 819,
+      "n_with_population": 953,
+      "n_with_caveat": 479,
+      "n_with_benefit": 531,
+      "readiness": 0.3545,
+      "quantification_rate": 0.4095,
+      "population_rate": 0.4765,
+      "caveat_rate": 0.2395,
+      "benefit_rate": 0.2655,
+      "bare_rate": 0.237
+    }
+  },
+  "delta_vs_sparse": {
+    "bleed": {
+      "readiness": 0.006,
+      "quantification_rate": 0.0055,
+      "population_rate": -0.006,
+      "caveat_rate": 0.019,
+      "benefit_rate": -0.001,
+      "bare_rate": -0.045
+    },
+    "context": {
+      "readiness": 0.0955,
+      "quantification_rate": 0.0875,
+      "population_rate": 0.0895,
+      "caveat_rate": 0.081,
+      "benefit_rate": 0.086,
+      "bare_rate": -0.0875
+    },
+    "bleedctx": {
+      "readiness": 0.084,
+      "quantification_rate": 0.077,
+      "population_rate": 0.0645,
+      "caveat_rate": 0.0815,
+      "benefit_rate": 0.0775,
+      "bare_rate": -0.1165
+    },
+    "page": {
+      "readiness": 0.0505,
+      "quantification_rate": 0.0635,
+      "population_rate": 0.054,
+      "caveat_rate": 0.0405,
+      "benefit_rate": 0.0295,
+      "bare_rate": 0.001
+    },
+    "pagectx": {
+      "readiness": 0.155,
+      "quantification_rate": 0.156,
+      "population_rate": 0.145,
+      "caveat_rate": 0.1335,
+      "benefit_rate": 0.131,
+      "bare_rate": -0.0915
+    }
+  },
+  "context_provision": {
+    "sparse": {
+      "n_queries": 2000,
+      "n_found_gold": 995,
+      "n_qualified": 176,
+      "n_bare": 819,
+      "qar": 0.088,
+      "bar": 0.4095,
+      "sabr": 0.1769,
+      "qual_ratio": 0.254
+    },
+    "bleed": {
+      "n_queries": 2000,
+      "n_found_gold": 940,
+      "n_qualified": 269,
+      "n_bare": 671,
+      "qar": 0.1345,
+      "bar": 0.3355,
+      "sabr": 0.2862,
+      "qual_ratio": 0.304
+    },
+    "context": {
+      "n_queries": 2000,
+      "n_found_gold": 1063,
+      "n_qualified": 742,
+      "n_bare": 321,
+      "qar": 0.371,
+      "bar": 0.1605,
+      "sabr": 0.698,
+      "qual_ratio": 0.5221
+    },
+    "bleedctx": {
+      "n_queries": 2000,
+      "n_found_gold": 998,
+      "n_qualified": 718,
+      "n_bare": 280,
+      "qar": 0.359,
+      "bar": 0.14,
+      "sabr": 0.7194,
+      "qual_ratio": 0.5101
+    },
+    "page": {
+      "n_queries": 2000,
+      "n_found_gold": 1148,
+      "n_qualified": 319,
+      "n_bare": 829,
+      "qar": 0.1595,
+      "bar": 0.4145,
+      "sabr": 0.2779,
+      "qual_ratio": 0.3222
+    },
+    "pagectx": {
+      "n_queries": 2000,
+      "n_found_gold": 1204,
+      "n_qualified": 911,
+      "n_bare": 293,
+      "qar": 0.4555,
+      "bar": 0.1465,
+      "sabr": 0.7566,
+      "qual_ratio": 0.5306
+    }
+  },
+  "identical_to_sparse": {
+    "bleed": false,
+    "context": false,
+    "bleedctx": false,
+    "page": false,
+    "pagectx": false
+  },
+  "unavailable": {},
+  "elapsed_s": 6774.7
+}

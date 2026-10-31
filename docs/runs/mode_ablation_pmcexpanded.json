@@ -1,0 +1,329 @@
+{
+  "n_queries": 2000,
+  "section_composition": {
+    "sparse": {
+      "share_of_gold_passages_by_kind": {
+        "background": 0.2855,
+        "discussion": 0.1926,
+        "results": 0.2167,
+        "(none)": 0.1621,
+        "methods": 0.0926,
+        "conclusions": 0.0504,
+        "references": 0.0
+      },
+      "counts_by_kind": {
+        "results": 782,
+        "(none)": 585,
+        "background": 1030,
+        "discussion": 695,
+        "methods": 334,
+        "conclusions": 182
+      }
+    },
+    "bleed": {
+      "share_of_gold_passages_by_kind": {
+        "background": 0.2571,
+        "discussion": 0.1894,
+        "results": 0.2264,
+        "(none)": 0.1768,
+        "methods": 0.0982,
+        "conclusions": 0.0521,
+        "references": 0.0
+      },
+      "counts_by_kind": {
+        "results": 899,
+        "background": 1021,
+        "discussion": 752,
+        "(none)": 702,
+        "conclusions": 207,
+        "methods": 390
+      }
+    },
+    "context": {
+      "share_of_gold_passages_by_kind": {
+        "background": 0.2442,
+        "discussion": 0.2104,
+        "results": 0.1733,
+        "(none)": 0.14,
+        "methods": 0.1433,
+        "conclusions": 0.0887,
+        "references": 0.0
+      },
+      "counts_by_kind": {
+        "results": 1061,
+        "(none)": 857,
+        "methods": 877,
+        "conclusions": 543,
+        "background": 1495,
+        "discussion": 1288
+      }
+    },
+    "bleedctx": {
+      "share_of_gold_passages_by_kind": {
+        "background": 0.2307,
+        "discussion": 0.196,
+        "results": 0.1858,
+        "(none)": 0.1593,
+        "methods": 0.1455,
+        "conclusions": 0.0826,
+        "references": 0.0
+      },
+      "counts_by_kind": {
+        "results": 1185,
+        "methods": 928,
+        "conclusions": 527,
+        "background": 1471,
+        "discussion": 1250,
+        "(none)": 1016
+      }
+    },
+    "page": {
+      "share_of_gold_passages_by_kind": {
+        "background": 0.2857,
+        "discussion": 0.1788,
+        "results": 0.1902,
+        "(none)": 0.1942,
+        "methods": 0.0969,
+        "conclusions": 0.0537,
+        "references": 0.0004
+      },
+      "counts_by_kind": {
+        "(none)": 966,
+        "results": 946,
+        "background": 1421,
+        "discussion": 889,
+        "methods": 482,
+        "conclusions": 267,
+        "references": 2
+      }
+    },
+    "pagectx": {
+      "share_of_gold_passages_by_kind": {
+        "background": 0.2499,
+        "discussion": 0.1966,
+        "results": 0.157,
+        "(none)": 0.1699,
+        "methods": 0.1405,
+        "conclusions": 0.0859,
+        "references": 0.0002
+      },
+      "counts_by_kind": {
+        "(none)": 1434,
+        "discussion": 1659,
+        "results": 1325,
+        "methods": 1186,
+        "conclusions": 725,
+        "background": 2109,
+        "references": 2
+      }
+    }
+  },
+  "top_k": 10,
+  "index_dir": "data/pmcexpanded/index",
+  "page_index_documents": 4044247,
+  "readiness": {
+    "sparse": {
+      "n_queries": 2000,
+      "n_found_gold": 1212,
+      "n_ready": 283,
+      "n_quantified": 470,
+      "n_with_population": 492,
+      "n_with_caveat": 188,
+      "n_with_benefit": 137,
+      "readiness": 0.1415,
+      "quantification_rate": 0.235,
+      "population_rate": 0.246,
+      "caveat_rate": 0.094,
+      "benefit_rate": 0.0685,
+      "bare_rate": 0.371
+    },
+    "bleed": {
+      "n_queries": 2000,
+      "n_found_gold": 1107,
+      "n_ready": 302,
+      "n_quantified": 478,
+      "n_with_population": 489,
+      "n_with_caveat": 195,
+      "n_with_benefit": 139,
+      "readiness": 0.151,
+      "quantification_rate": 0.239,
+      "population_rate": 0.2445,
+      "caveat_rate": 0.0975,
+      "benefit_rate": 0.0695,
+      "bare_rate": 0.3145
+    },
+    "context": {
+      "n_queries": 2000,
+      "n_found_gold": 1212,
+      "n_ready": 436,
+      "n_quantified": 659,
+      "n_with_population": 636,
+      "n_with_caveat": 282,
+      "n_with_benefit": 217,
+      "readiness": 0.218,
+      "quantification_rate": 0.3295,
+      "population_rate": 0.318,
+      "caveat_rate": 0.141,
+      "benefit_rate": 0.1085,
+      "bare_rate": 0.2765
+    },
+    "bleedctx": {
+      "n_queries": 2000,
+      "n_found_gold": 1107,
+      "n_ready": 429,
+      "n_quantified": 626,
+      "n_with_population": 597,
+      "n_with_caveat": 278,
+      "n_with_benefit": 201,
+      "readiness": 0.2145,
+      "quantification_rate": 0.313,
+      "population_rate": 0.2985,
+      "caveat_rate": 0.139,
+      "benefit_rate": 0.1005,
+      "bare_rate": 0.2405
+    },
+    "page": {
+      "n_queries": 2000,
+      "n_found_gold": 1315,
+      "n_ready": 354,
+      "n_quantified": 562,
+      "n_with_population": 583,
+      "n_with_caveat": 229,
+      "n_with_benefit": 188,
+      "readiness": 0.177,
+      "quantification_rate": 0.281,
+      "population_rate": 0.2915,
+      "caveat_rate": 0.1145,
+      "benefit_rate": 0.094,
+      "bare_rate": 0.3765
+    },
+    "pagectx": {
+      "n_queries": 2000,
+      "n_found_gold": 1315,
+      "n_ready": 558,
+      "n_quantified": 795,
+      "n_with_population": 760,
+      "n_with_caveat": 355,
+      "n_with_benefit": 289,
+      "readiness": 0.279,
+      "quantification_rate": 0.3975,
+      "population_rate": 0.38,
+      "caveat_rate": 0.1775,
+      "benefit_rate": 0.1445,
+      "bare_rate": 0.26
+    }
+  },
+  "delta_vs_sparse": {
+    "bleed": {
+      "readiness": 0.0095,
+      "quantification_rate": 0.004,
+      "population_rate": -0.0015,
+      "caveat_rate": 0.0035,
+      "benefit_rate": 0.001,
+      "bare_rate": -0.0565
+    },
+    "context": {
+      "readiness": 0.0765,
+      "quantification_rate": 0.0945,
+      "population_rate": 0.072,
+      "caveat_rate": 0.047,
+      "benefit_rate": 0.04,
+      "bare_rate": -0.0945
+    },
+    "bleedctx": {
+      "readiness": 0.073,
+      "quantification_rate": 0.078,
+      "population_rate": 0.0525,
+      "caveat_rate": 0.045,
+      "benefit_rate": 0.032,
+      "bare_rate": -0.1305
+    },
+    "page": {
+      "readiness": 0.0355,
+      "quantification_rate": 0.046,
+      "population_rate": 0.0455,
+      "caveat_rate": 0.0205,
+      "benefit_rate": 0.0255,
+      "bare_rate": 0.0055
+    },
+    "pagectx": {
+      "readiness": 0.1375,
+      "quantification_rate": 0.1625,
+      "population_rate": 0.134,
+      "caveat_rate": 0.0835,
+      "benefit_rate": 0.076,
+      "bare_rate": -0.111
+    }
+  },
+  "context_provision": {
+    "sparse": {
+      "n_queries": 2000,
+      "n_found_gold": 1064,
+      "n_qualified": 234,
+      "n_bare": 830,
+      "qar": 0.117,
+      "bar": 0.415,
+      "sabr": 0.2199,
+      "qual_ratio": 0.3635
+    },
+    "bleed": {
+      "n_queries": 2000,
+      "n_found_gold": 986,
+      "n_qualified": 336,
+      "n_bare": 650,
+      "qar": 0.168,
+      "bar": 0.325,
+      "sabr": 0.3408,
+      "qual_ratio": 0.411
+    },
+    "context": {
+      "n_queries": 2000,
+      "n_found_gold": 1111,
+      "n_qualified": 788,
+      "n_bare": 323,
+      "qar": 0.394,
+      "bar": 0.1615,
+      "sabr": 0.7093,
+      "qual_ratio": 0.581
+    },
+    "bleedctx": {
+      "n_queries": 2000,
+      "n_found_gold": 1018,
+      "n_qualified": 735,
+      "n_bare": 283,
+      "qar": 0.3675,
+      "bar": 0.1415,
+      "sabr": 0.722,
+      "qual_ratio": 0.5617
+    },
+    "page": {
+      "n_queries": 2000,
+      "n_found_gold": 1188,
+      "n_qualified": 365,
+      "n_bare": 823,
+      "qar": 0.1825,
+      "bar": 0.4115,
+      "sabr": 0.3072,
+      "qual_ratio": 0.3907
+    },
+    "pagectx": {
+      "n_queries": 2000,
+      "n_found_gold": 1230,
+      "n_qualified": 935,
+      "n_bare": 295,
+      "qar": 0.4675,
+      "bar": 0.1475,
+      "sabr": 0.7602,
+      "qual_ratio": 0.5794
+    }
+  },
+  "identical_to_sparse": {
+    "bleed": false,
+    "context": false,
+    "bleedctx": false,
+    "page": false,
+    "pagectx": false
+  },
+  "unavailable": {},
+  "elapsed_s": 1467.8
+}

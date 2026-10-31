@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "medrag"
+version = "0.1.0"
+description = "MedCARAG (Medical Context-Aware RAG): full-text indexes, a MeSH-derived benchmark and readiness metrics for context-aware medical retrieval-augmented generation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "requests>=2.31",
+    "lxml>=5.0",
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+    "pydantic>=2.6",
+    "pyyaml>=6.0",
+    "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+index = ["faiss-cpu>=1.8", "torch>=2.2", "transformers>=4.40", "sentence-transformers>=3.0"]
+all = ["medrag[index]"]
+
+[project.scripts]
+medrag = "medrag.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["medrag*"]

@@ -1,0 +1,38 @@
+paths:
+  # Every PubMed abstract crawled, merged and deduplicated: the year sweeps from both
+  # nodes plus the evidence-synthesis slices. 20,308,119 unique PMIDs counted before the
+  # merge. Built by:
+  #
+  #   scripts/merge_crawl_roots.py --source pubmed --prefix pubmed --link --salvage-partial \
+  #     --roots newcorpus sweepcorpus sweepcorpus_cst1 --dest abstracts20m/corpus/pubmed
+  #
+  # This is the scale corpus, not the benchmark corpus: it includes observational work,
+  # case reports and every quality level. Nothing measured here should be reported as if
+  # measured on newcorpus or pmcmerged.
+  data_root: data/abstracts20m
+  index_dir: data/abstracts20m/index
+
+acquire:
+  # Already crawled. Recorded so the chunker reads the pubmed shards.
+  source: pubmed
+  lang: english
+
+chunk:
+  # Same as sweepnewcorpus.yaml, where these abstracts were crawled.
+  target_tokens: 256
+  max_tokens: 384
+
+embed:
+  model_name: BAAI/bge-small-en-v1.5
+  query_prefix: "Represent this sentence for searching relevant passages: "
+  pooling: cls
+  normalize: true
+  batch_size: 256
+  block_size: 20000
+  max_seq_length: 320
+  device: auto
+  fp16: true
+  dim: 384
+
+rerank:
+  enabled: false

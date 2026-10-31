@@ -1,0 +1,40 @@
+paths:
+  # Fresh output for the 4-GPU sharded-embedding verification. The chunk store is
+  # symlinked in from pmcmerged, so the 46.6 GB blob is reused rather than copied and
+  # the vectors under test are genuinely new -- nothing here can be inherited from the
+  # existing complete index.
+  data_root: data/verify4
+  index_dir: data/verify4/index
+
+acquire:
+  source: pmc
+
+chunk:
+  strategy: section
+  target_tokens: 320
+  max_tokens: 512
+  overlap_tokens: 64
+  min_tokens: 48
+
+embed:
+  model_name: BAAI/bge-small-en-v1.5
+  query_prefix: "Represent this sentence for searching relevant passages: "
+  pooling: cls
+  normalize: true
+  # The objective's quoted baseline is ~166 rows/s single-node and predicts 664 rows/s
+  # for 4 GPUs, so the batch size must match what produced 166 or the comparison is
+  # meaningless. Left at the config default the whole project has used throughout.
+  batch_size: 256
+  block_size: 20000
+  max_seq_length: 320
+  # "auto" rather than a pinned cuda:N on purpose. build_embedder selects
+  # MultiGpuEmbedder when it sees >=2 CUDA devices, measured 1.6x the single-device
+  # path on this hardware -- so one process per node drives that node's two Quadro
+  # P2000s, and two processes across the two nodes is what actually puts all 4 GPUs
+  # to work. Pinning cuda:0 would silently leave a GPU idle while appearing to run.
+  device: auto
+  fp16: true
+  dim: 384
+
+rerank:
+  enabled: false

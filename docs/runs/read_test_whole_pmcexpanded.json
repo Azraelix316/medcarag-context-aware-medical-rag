@@ -1,0 +1,393 @@
+{
+  "n_queries": 300,
+  "arms": [
+    "sparse",
+    "pagectx",
+    "randsec@pagectx"
+  ],
+  "seed": 7,
+  "generator_endpoint": "http://127.0.0.1:8081/v1/chat/completions",
+  "workers": 1,
+  "prompt_chars": 80000,
+  "input": {
+    "sparse": {
+      "n_queries": 300,
+      "n_found_gold": 183,
+      "n_ready": 44,
+      "n_quantified": 71,
+      "n_with_population": 80,
+      "n_with_caveat": 29,
+      "n_with_benefit": 27,
+      "readiness": 0.1467,
+      "quantification_rate": 0.2367,
+      "population_rate": 0.2667,
+      "caveat_rate": 0.0967,
+      "benefit_rate": 0.09,
+      "bare_rate": 0.3733
+    },
+    "pagectx": {
+      "n_queries": 300,
+      "n_found_gold": 193,
+      "n_ready": 80,
+      "n_quantified": 128,
+      "n_with_population": 112,
+      "n_with_caveat": 58,
+      "n_with_benefit": 55,
+      "readiness": 0.2667,
+      "quantification_rate": 0.4267,
+      "population_rate": 0.3733,
+      "caveat_rate": 0.1933,
+      "benefit_rate": 0.1833,
+      "bare_rate": 0.2167
+    },
+    "randsec@pagectx": {
+      "n_queries": 300,
+      "n_found_gold": 193,
+      "n_ready": 94,
+      "n_quantified": 132,
+      "n_with_population": 122,
+      "n_with_caveat": 55,
+      "n_with_benefit": 49,
+      "readiness": 0.3133,
+      "quantification_rate": 0.44,
+      "population_rate": 0.4067,
+      "caveat_rate": 0.1833,
+      "benefit_rate": 0.1633,
+      "bare_rate": 0.2033
+    }
+  },
+  "output": {
+    "sparse": {
+      "n": 300,
+      "produced": 1.0,
+      "rate": 0.4033,
+      "population": 0.2333,
+      "caveat": 0.02,
+      "benefit": 0.05,
+      "declined": 0.0,
+      "ready": 0.1433,
+      "grounded_rate": 0.1933,
+      "grounded_ready": 0.0767
+    },
+    "pagectx": {
+      "n": 300,
+      "produced": 1.0,
+      "rate": 0.4433,
+      "population": 0.2033,
+      "caveat": 0.0067,
+      "benefit": 0.0567,
+      "declined": 0.0,
+      "ready": 0.13,
+      "grounded_rate": 0.2433,
+      "grounded_ready": 0.0767
+    },
+    "randsec@pagectx": {
+      "n": 300,
+      "produced": 1.0,
+      "rate": 0.4567,
+      "population": 0.24,
+      "caveat": 0.0133,
+      "benefit": 0.07,
+      "declined": 0.0,
+      "ready": 0.1667,
+      "grounded_rate": 0.24,
+      "grounded_ready": 0.0867
+    }
+  },
+  "paired": {
+    "pagectx vs sparse": {
+      "ready": {
+        "base": 0.1433,
+        "arm": 0.13,
+        "delta": -0.0133,
+        "ci95": [
+          -0.0567,
+          0.03
+        ],
+        "arm_only": 19,
+        "base_only": 23,
+        "p_mcnemar": 0.6439689563703723,
+        "p_holm": 1.0
+      },
+      "has_rate": {
+        "base": 0.4033,
+        "arm": 0.4433,
+        "delta": 0.04,
+        "ci95": [
+          -0.0167,
+          0.0967
+        ],
+        "arm_only": 45,
+        "base_only": 33,
+        "p_mcnemar": 0.21268281985080578,
+        "p_holm": 1.0
+      },
+      "has_population": {
+        "base": 0.2333,
+        "arm": 0.2033,
+        "delta": -0.03,
+        "ci95": [
+          -0.08,
+          0.02
+        ],
+        "arm_only": 24,
+        "base_only": 33,
+        "p_mcnemar": 0.2892437471090205,
+        "p_holm": 1.0
+      },
+      "has_caveat": {
+        "base": 0.02,
+        "arm": 0.0067,
+        "delta": -0.0133,
+        "ci95": [
+          -0.0333,
+          0.0033
+        ],
+        "arm_only": 2,
+        "base_only": 6,
+        "p_mcnemar": 0.2890625,
+        "p_holm": 1.0
+      },
+      "has_benefit": {
+        "base": 0.05,
+        "arm": 0.0567,
+        "delta": 0.0067,
+        "ci95": [
+          -0.0233,
+          0.0367
+        ],
+        "arm_only": 12,
+        "base_only": 10,
+        "p_mcnemar": 0.8318119049072266,
+        "p_holm": 1.0
+      },
+      "grounded_rate": {
+        "base": 0.1933,
+        "arm": 0.2433,
+        "delta": 0.05,
+        "ci95": [
+          0.0033,
+          0.0967
+        ],
+        "arm_only": 34,
+        "base_only": 19,
+        "p_mcnemar": 0.053438810537711046,
+        "p_holm": 1.0
+      },
+      "grounded_ready": {
+        "base": 0.0767,
+        "arm": 0.0767,
+        "delta": 0.0,
+        "ci95": [
+          -0.0367,
+          0.0367
+        ],
+        "arm_only": 16,
+        "base_only": 16,
+        "p_mcnemar": 1.0,
+        "p_holm": 1.0
+      }
+    },
+    "randsec@pagectx vs sparse": {
+      "ready": {
+        "base": 0.1433,
+        "arm": 0.1667,
+        "delta": 0.0233,
+        "ci95": [
+          -0.02,
+          0.0667
+        ],
+        "arm_only": 26,
+        "base_only": 19,
+        "p_mcnemar": 0.3712980344710104,
+        "p_holm": 1.0
+      },
+      "has_rate": {
+        "base": 0.4033,
+        "arm": 0.4567,
+        "delta": 0.0533,
+        "ci95": [
+          -0.0067,
+          0.1167
+        ],
+        "arm_only": 52,
+        "base_only": 36,
+        "p_mcnemar": 0.10929542977731425,
+        "p_holm": 1.0
+      },
+      "has_population": {
+        "base": 0.2333,
+        "arm": 0.24,
+        "delta": 0.0067,
+        "ci95": [
+          -0.0467,
+          0.0567
+        ],
+        "arm_only": 32,
+        "base_only": 30,
+        "p_mcnemar": 0.899076313652859,
+        "p_holm": 1.0
+      },
+      "has_caveat": {
+        "base": 0.02,
+        "arm": 0.0133,
+        "delta": -0.0067,
+        "ci95": [
+          -0.0267,
+          0.0133
+        ],
+        "arm_only": 4,
+        "base_only": 6,
+        "p_mcnemar": 0.75390625,
+        "p_holm": 1.0
+      },
+      "has_benefit": {
+        "base": 0.05,
+        "arm": 0.07,
+        "delta": 0.02,
+        "ci95": [
+          -0.0133,
+          0.0533
+        ],
+        "arm_only": 16,
+        "base_only": 10,
+        "p_mcnemar": 0.32693958282470703,
+        "p_holm": 1.0
+      },
+      "grounded_rate": {
+        "base": 0.1933,
+        "arm": 0.24,
+        "delta": 0.0467,
+        "ci95": [
+          0.0,
+          0.0933
+        ],
+        "arm_only": 34,
+        "base_only": 20,
+        "p_mcnemar": 0.07590472948910143,
+        "p_holm": 1.0
+      },
+      "grounded_ready": {
+        "base": 0.0767,
+        "arm": 0.0867,
+        "delta": 0.01,
+        "ci95": [
+          -0.0267,
+          0.0467
+        ],
+        "arm_only": 17,
+        "base_only": 14,
+        "p_mcnemar": 0.720100131817162,
+        "p_holm": 1.0
+      }
+    },
+    "pagectx vs randsec@pagectx": {
+      "ready": {
+        "base": 0.1667,
+        "arm": 0.13,
+        "delta": -0.0367,
+        "ci95": [
+          -0.0767,
+          0.0033
+        ],
+        "arm_only": 14,
+        "base_only": 25,
+        "p_mcnemar": 0.10812902140605729,
+        "p_holm": 1.0
+      },
+      "has_rate": {
+        "base": 0.4567,
+        "arm": 0.4433,
+        "delta": -0.0133,
+        "ci95": [
+          -0.06,
+          0.0333
+        ],
+        "arm_only": 24,
+        "base_only": 28,
+        "p_mcnemar": 0.6778086391424605,
+        "p_holm": 1.0
+      },
+      "has_population": {
+        "base": 0.24,
+        "arm": 0.2033,
+        "delta": -0.0367,
+        "ci95": [
+          -0.08,
+          0.0033
+        ],
+        "arm_only": 15,
+        "base_only": 26,
+        "p_mcnemar": 0.11727520595741225,
+        "p_holm": 1.0
+      },
+      "has_caveat": {
+        "base": 0.0133,
+        "arm": 0.0067,
+        "delta": -0.0067,
+        "ci95": [
+          -0.02,
+          0.0067
+        ],
+        "arm_only": 1,
+        "base_only": 3,
+        "p_mcnemar": 0.625,
+        "p_holm": 1.0
+      },
+      "has_benefit": {
+        "base": 0.07,
+        "arm": 0.0567,
+        "delta": -0.0133,
+        "ci95": [
+          -0.0433,
+          0.0167
+        ],
+        "arm_only": 8,
+        "base_only": 12,
+        "p_mcnemar": 0.5034446716308594,
+        "p_holm": 1.0
+      },
+      "grounded_rate": {
+        "base": 0.24,
+        "arm": 0.2433,
+        "delta": 0.0033,
+        "ci95": [
+          -0.0367,
+          0.0433
+        ],
+        "arm_only": 19,
+        "base_only": 18,
+        "p_mcnemar": 1.0,
+        "p_holm": 1.0
+      },
+      "grounded_ready": {
+        "base": 0.0867,
+        "arm": 0.0767,
+        "delta": -0.01,
+        "ci95": [
+          -0.0433,
+          0.0233
+        ],
+        "arm_only": 12,
+        "base_only": 15,
+        "p_mcnemar": 0.7011080384254456,
+        "p_holm": 1.0
+      }
+    }
+  },
+  "caveat_cross_tab": {
+    "sparse": {
+      "input_caveat_queries": 29,
+      "answer_caveat_queries": 3
+    },
+    "pagectx": {
+      "input_caveat_queries": 58,
+      "answer_caveat_queries": 2
+    },
+    "randsec@pagectx": {
+      "input_caveat_queries": 55,
+      "answer_caveat_queries": 2
+    }
+  },
+  "elapsed_s": 0.7
+}

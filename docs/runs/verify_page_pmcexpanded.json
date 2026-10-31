@@ -1,0 +1,15 @@
+{
+  "part": "page",
+  "index_dir": "data/pmcexpanded/index",
+  "seed": 20261028,
+  "elapsed_s": 211.8,
+  "n_docs": 4044247,
+  "manifest_docs": 4044247,
+  "memmap": true,
+  "dim": 384,
+  "blocks_compared": 20,
+  "blocks_mismatched": [],
+  "norm_min_first_2M": 0.9999998807907104,
+  "norm_max_first_2M": 1.0000001192092896,
+  "doc_ids_unique": true
+}

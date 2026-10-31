@@ -1,0 +1,101 @@
+{
+  "max_chars": 5500,
+  "readiness": {
+    "sparse": {
+      "full": {
+        "n_queries": 300,
+        "n_found_gold": 183,
+        "n_ready": 44,
+        "n_quantified": 71,
+        "n_with_population": 80,
+        "n_with_caveat": 29,
+        "n_with_benefit": 27,
+        "readiness": 0.1467,
+        "quantification_rate": 0.2367,
+        "population_rate": 0.2667,
+        "caveat_rate": 0.0967,
+        "benefit_rate": 0.09,
+        "bare_rate": 0.3733
+      },
+      "prompt": {
+        "n_queries": 300,
+        "n_found_gold": 183,
+        "n_ready": 22,
+        "n_quantified": 54,
+        "n_with_population": 49,
+        "n_with_caveat": 14,
+        "n_with_benefit": 11,
+        "readiness": 0.0733,
+        "quantification_rate": 0.18,
+        "population_rate": 0.1633,
+        "caveat_rate": 0.0467,
+        "benefit_rate": 0.0367,
+        "bare_rate": 0.43
+      }
+    },
+    "pagectx": {
+      "full": {
+        "n_queries": 300,
+        "n_found_gold": 193,
+        "n_ready": 80,
+        "n_quantified": 128,
+        "n_with_population": 112,
+        "n_with_caveat": 58,
+        "n_with_benefit": 55,
+        "readiness": 0.2667,
+        "quantification_rate": 0.4267,
+        "population_rate": 0.3733,
+        "caveat_rate": 0.1933,
+        "benefit_rate": 0.1833,
+        "bare_rate": 0.2167
+      },
+      "prompt": {
+        "n_queries": 300,
+        "n_found_gold": 193,
+        "n_ready": 43,
+        "n_quantified": 91,
+        "n_with_population": 73,
+        "n_with_caveat": 20,
+        "n_with_benefit": 19,
+        "readiness": 0.1433,
+        "quantification_rate": 0.3033,
+        "population_rate": 0.2433,
+        "caveat_rate": 0.0667,
+        "benefit_rate": 0.0633,
+        "bare_rate": 0.34
+      }
+    },
+    "randsec@pagectx": {
+      "full": {
+        "n_queries": 300,
+        "n_found_gold": 193,
+        "n_ready": 94,
+        "n_quantified": 132,
+        "n_with_population": 122,
+        "n_with_caveat": 55,
+        "n_with_benefit": 49,
+        "readiness": 0.3133,
+        "quantification_rate": 0.44,
+        "population_rate": 0.4067,
+        "caveat_rate": 0.1833,
+        "benefit_rate": 0.1633,
+        "bare_rate": 0.2033
+      },
+      "prompt": {
+        "n_queries": 300,
+        "n_found_gold": 193,
+        "n_ready": 46,
+        "n_quantified": 92,
+        "n_with_population": 78,
+        "n_with_caveat": 24,
+        "n_with_benefit": 16,
+        "readiness": 0.1533,
+        "quantification_rate": 0.3067,
+        "population_rate": 0.26,
+        "caveat_rate": 0.08,
+        "benefit_rate": 0.0533,
+        "bare_rate": 0.3367
+      }
+    }
+  }
+}

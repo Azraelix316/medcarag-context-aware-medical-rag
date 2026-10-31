@@ -1,0 +1,409 @@
+{
+  "base": "sparse",
+  "n_queries": 2000,
+  "n_boot": 10000,
+  "seed": 7,
+  "n_comparisons": 30,
+  "arms": {
+    "bleed": {
+      "readiness": {
+        "base": 0.1555,
+        "arm": 0.15,
+        "delta": -0.0055,
+        "ci95": [
+          -0.014,
+          0.003
+        ],
+        "arm_only": 32,
+        "base_only": 43,
+        "p_mcnemar": 0.24804574189252795,
+        "p_holm": 1.0
+      },
+      "quantification_rate": {
+        "base": 0.2495,
+        "arm": 0.2455,
+        "delta": -0.004,
+        "ci95": [
+          -0.0135,
+          0.0055
+        ],
+        "arm_only": 43,
+        "base_only": 51,
+        "p_mcnemar": 0.47049211489037057,
+        "p_holm": 1.0
+      },
+      "population_rate": {
+        "base": 0.308,
+        "arm": 0.3025,
+        "delta": -0.0055,
+        "ci95": [
+          -0.015,
+          0.004
+        ],
+        "arm_only": 40,
+        "base_only": 51,
+        "p_mcnemar": 0.29446978456853307,
+        "p_holm": 1.0
+      },
+      "caveat_rate": {
+        "base": 0.07,
+        "arm": 0.066,
+        "delta": -0.004,
+        "ci95": [
+          -0.0095,
+          0.0015
+        ],
+        "arm_only": 12,
+        "base_only": 20,
+        "p_mcnemar": 0.21532714972272515,
+        "p_holm": 1.0
+      },
+      "benefit_rate": {
+        "base": 0.079,
+        "arm": 0.0805,
+        "delta": 0.0015,
+        "ci95": [
+          -0.005,
+          0.0085
+        ],
+        "arm_only": 25,
+        "base_only": 22,
+        "p_mcnemar": 0.7708669945730264,
+        "p_holm": 1.0
+      },
+      "bare_rate": {
+        "base": 0.4995,
+        "arm": 0.4925,
+        "delta": -0.007,
+        "ci95": [
+          -0.018,
+          0.004
+        ],
+        "arm_only": 57,
+        "base_only": 71,
+        "p_mcnemar": 0.2504398806192594,
+        "p_holm": 1.0
+      }
+    },
+    "context": {
+      "readiness": {
+        "base": 0.1555,
+        "arm": 0.201,
+        "delta": 0.0455,
+        "ci95": [
+          0.0365,
+          0.055
+        ],
+        "arm_only": 91,
+        "base_only": 0,
+        "p_mcnemar": 8.077935669463161e-28,
+        "p_holm": 2.261821987449685e-26
+      },
+      "quantification_rate": {
+        "base": 0.2495,
+        "arm": 0.3015,
+        "delta": 0.052,
+        "ci95": [
+          0.0425,
+          0.062
+        ],
+        "arm_only": 104,
+        "base_only": 0,
+        "p_mcnemar": 9.860761315262648e-32,
+        "p_holm": 2.9582283945787943e-30
+      },
+      "population_rate": {
+        "base": 0.308,
+        "arm": 0.352,
+        "delta": 0.044,
+        "ci95": [
+          0.0355,
+          0.053
+        ],
+        "arm_only": 88,
+        "base_only": 0,
+        "p_mcnemar": 6.462348535570529e-27,
+        "p_holm": 1.7448341046040428e-25
+      },
+      "caveat_rate": {
+        "base": 0.07,
+        "arm": 0.0875,
+        "delta": 0.0175,
+        "ci95": [
+          0.012,
+          0.0235
+        ],
+        "arm_only": 35,
+        "base_only": 0,
+        "p_mcnemar": 5.820766091346741e-11,
+        "p_holm": 1.280568540096283e-09
+      },
+      "benefit_rate": {
+        "base": 0.079,
+        "arm": 0.1,
+        "delta": 0.021,
+        "ci95": [
+          0.015,
+          0.0275
+        ],
+        "arm_only": 42,
+        "base_only": 0,
+        "p_mcnemar": 4.547473508864641e-13,
+        "p_holm": 1.0459189070388675e-11
+      },
+      "bare_rate": {
+        "base": 0.4995,
+        "arm": 0.4475,
+        "delta": -0.052,
+        "ci95": [
+          -0.062,
+          -0.042
+        ],
+        "arm_only": 0,
+        "base_only": 104,
+        "p_mcnemar": 9.860761315262648e-32,
+        "p_holm": 2.9582283945787943e-30
+      }
+    },
+    "bleedctx": {
+      "readiness": {
+        "base": 0.1555,
+        "arm": 0.2015,
+        "delta": 0.046,
+        "ci95": [
+          0.034,
+          0.0585
+        ],
+        "arm_only": 127,
+        "base_only": 35,
+        "p_mcnemar": 1.850909654499727e-13,
+        "p_holm": 4.442183170799345e-12
+      },
+      "quantification_rate": {
+        "base": 0.2495,
+        "arm": 0.302,
+        "delta": 0.0525,
+        "ci95": [
+          0.0395,
+          0.066
+        ],
+        "arm_only": 148,
+        "base_only": 43,
+        "p_mcnemar": 1.0673259517250279e-14,
+        "p_holm": 2.66831487931257e-13
+      },
+      "population_rate": {
+        "base": 0.308,
+        "arm": 0.342,
+        "delta": 0.034,
+        "ci95": [
+          0.022,
+          0.046
+        ],
+        "arm_only": 112,
+        "base_only": 44,
+        "p_mcnemar": 5.044015549363934e-08,
+        "p_holm": 9.583629543791475e-07
+      },
+      "caveat_rate": {
+        "base": 0.07,
+        "arm": 0.081,
+        "delta": 0.011,
+        "ci95": [
+          0.0035,
+          0.0185
+        ],
+        "arm_only": 42,
+        "base_only": 20,
+        "p_mcnemar": 0.007148733833163067,
+        "p_holm": 0.09293353983111988
+      },
+      "benefit_rate": {
+        "base": 0.079,
+        "arm": 0.097,
+        "delta": 0.018,
+        "ci95": [
+          0.0095,
+          0.0265
+        ],
+        "arm_only": 57,
+        "base_only": 21,
+        "p_mcnemar": 5.571116486469109e-05,
+        "p_holm": 0.0009470898026997485
+      },
+      "bare_rate": {
+        "base": 0.4995,
+        "arm": 0.436,
+        "delta": -0.0635,
+        "ci95": [
+          -0.078,
+          -0.049
+        ],
+        "arm_only": 49,
+        "base_only": 176,
+        "p_mcnemar": 5.3461369939995196e-18,
+        "p_holm": 1.389995618439875e-16
+      }
+    },
+    "page": {
+      "readiness": {
+        "base": 0.1555,
+        "arm": 0.1495,
+        "delta": -0.006,
+        "ci95": [
+          -0.0185,
+          0.0065
+        ],
+        "arm_only": 76,
+        "base_only": 88,
+        "p_mcnemar": 0.39043016796270574,
+        "p_holm": 1.0
+      },
+      "quantification_rate": {
+        "base": 0.2495,
+        "arm": 0.2485,
+        "delta": -0.001,
+        "ci95": [
+          -0.0155,
+          0.0135
+        ],
+        "arm_only": 107,
+        "base_only": 109,
+        "p_mcnemar": 0.9457736301231237,
+        "p_holm": 1.0
+      },
+      "population_rate": {
+        "base": 0.308,
+        "arm": 0.307,
+        "delta": -0.001,
+        "ci95": [
+          -0.0145,
+          0.013
+        ],
+        "arm_only": 101,
+        "base_only": 103,
+        "p_mcnemar": 0.9442053244754735,
+        "p_holm": 1.0
+      },
+      "caveat_rate": {
+        "base": 0.07,
+        "arm": 0.072,
+        "delta": 0.002,
+        "ci95": [
+          -0.007,
+          0.011
+        ],
+        "arm_only": 45,
+        "base_only": 41,
+        "p_mcnemar": 0.7465343822890573,
+        "p_holm": 1.0
+      },
+      "benefit_rate": {
+        "base": 0.079,
+        "arm": 0.0815,
+        "delta": 0.0025,
+        "ci95": [
+          -0.0065,
+          0.0115
+        ],
+        "arm_only": 45,
+        "base_only": 40,
+        "p_mcnemar": 0.6646454904132143,
+        "p_holm": 1.0
+      },
+      "bare_rate": {
+        "base": 0.4995,
+        "arm": 0.516,
+        "delta": 0.0165,
+        "ci95": [
+          -0.001,
+          0.034
+        ],
+        "arm_only": 180,
+        "base_only": 147,
+        "p_mcnemar": 0.07663270729462943,
+        "p_holm": 0.9195924875355531
+      }
+    },
+    "pagectx": {
+      "readiness": {
+        "base": 0.1555,
+        "arm": 0.1935,
+        "delta": 0.038,
+        "ci95": [
+          0.024,
+          0.052
+        ],
+        "arm_only": 142,
+        "base_only": 66,
+        "p_mcnemar": 1.461806579666828e-07,
+        "p_holm": 2.63125184340029e-06
+      },
+      "quantification_rate": {
+        "base": 0.2495,
+        "arm": 0.2965,
+        "delta": 0.047,
+        "ci95": [
+          0.031,
+          0.063
+        ],
+        "arm_only": 183,
+        "base_only": 89,
+        "p_mcnemar": 1.236974728853371e-08,
+        "p_holm": 2.597646930592079e-07
+      },
+      "population_rate": {
+        "base": 0.308,
+        "arm": 0.352,
+        "delta": 0.044,
+        "ci95": [
+          0.029,
+          0.0595
+        ],
+        "arm_only": 170,
+        "base_only": 82,
+        "p_mcnemar": 3.1030500520944944e-08,
+        "p_holm": 6.206100104188989e-07
+      },
+      "caveat_rate": {
+        "base": 0.07,
+        "arm": 0.0875,
+        "delta": 0.0175,
+        "ci95": [
+          0.007,
+          0.0285
+        ],
+        "arm_only": 76,
+        "base_only": 41,
+        "p_mcnemar": 0.0015572017627745892,
+        "p_holm": 0.021800824678844248
+      },
+      "benefit_rate": {
+        "base": 0.079,
+        "arm": 0.0965,
+        "delta": 0.0175,
+        "ci95": [
+          0.0075,
+          0.028
+        ],
+        "arm_only": 72,
+        "base_only": 37,
+        "p_mcnemar": 0.001032935621635677,
+        "p_holm": 0.01652696994617083
+      },
+      "bare_rate": {
+        "base": 0.4995,
+        "arm": 0.468,
+        "delta": -0.0315,
+        "ci95": [
+          -0.0505,
+          -0.013
+        ],
+        "arm_only": 156,
+        "base_only": 219,
+        "p_mcnemar": 0.0013351611054228938,
+        "p_holm": 0.020027416581343407
+      }
+    }
+  }
+}

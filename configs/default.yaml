@@ -1,0 +1,96 @@
+# Default MedRAG pipeline configuration.
+# Every stage reads this file; override per-stage with -c on the CLI.
+
+paths:
+  data_root: data
+  corpus_dir: corpus
+  index_dir: index
+  cache_dir: cache
+  runs_dir: runs
+  log_dir: ../logs
+
+acquire:
+  source: pubmed
+  # "" uses DEFAULT_QUERIES: a curated set of evidence-type slices (RCTs,
+  # systematic reviews, guidelines) rather than one undifferentiated sweep.
+  query: ""
+  filter_query: ""
+  lang: english
+  min_date: "2015/01/01"
+  max_date: "2026/12/31"
+  # 0 means unbounded (the full ~37M abstract corpus).
+  max_records: 200000
+  fetch_batch: 200
+  max_requests_per_second: 3.0
+  # Set NCBI_API_KEY in the environment to raise this to 10.
+  api_key: null
+  email: null
+  tool: medrag
+  max_retries: 5
+  request_timeout: 120
+  shard_size: 10000
+
+chunk:
+  # section-aware: packs structured sections (Methods/Results/...) to a token budget
+  strategy: section
+  target_tokens: 320
+  max_tokens: 512
+  overlap_tokens: 64
+  min_tokens: 48
+  # Prepended to each chunk's embedding text for context-enriched retrieval.
+  context_fields: [title, section, journal, year]
+  require_abstract: true
+
+embed:
+  # Small bi-encoder for fast iteration; swap for a larger model for the paper runs.
+  model_name: BAAI/bge-small-en-v1.5
+  query_prefix: "Represent this sentence for searching relevant passages: "
+  pooling: cls
+  normalize: true
+  batch_size: 64
+  max_seq_length: 512
+  device: auto
+  fp16: true
+  dim: 384
+
+sparse:
+  k1: 1.2
+  b: 0.75
+  persist: true
+  min_token_length: 2
+
+rerank:
+  enabled: true
+  model_name: BAAI/bge-reranker-base
+  depth: 100
+  top_k: 10
+  batch_size: 32
+  max_seq_length: 512
+  device: auto
+  fp16: true
+
+fusion:
+  # RRF is scale-free and needs no score calibration between BM25 and cosine.
+  method: rrf
+  rrf_k: 60
+  dense_top_k: 100
+  sparse_top_k: 100
+  dense_weight: 0.6
+  sparse_weight: 0.4
+
+query:
+  rewrite: heuristic
+  mode: auto
+  max_subqueries: 4
+  max_hops: 2
+
+serve:
+  host: 127.0.0.1
+  port: 8080
+  warmup: true
+  cors_origins: ["*"]
+
+evaluation:
+  metrics_at_k: [1, 3, 5, 10, 20, 100]
+  sample_size: 1000
+  seed: 13

@@ -1,0 +1,42 @@
+# Merged PMC OA full-text corpus (the contextual-contamination corpus).
+#
+# Assembled by scripts/merge_crawl_roots.py from three crawl roots:
+#
+#   pmcoa2_c7      2023-01-01..2026-12-31  plus 1996-01-01..2010-12-31
+#   pmcoa2_cst1a   2011-01-01..2019-12-31
+#   pmcoa2_cst1b   2020-01-01..2022-12-31
+#
+#   merged   555,142 documents, 555,142 unique, 0 duplicates, 113 shards
+#
+# Era windows are disjoint per node. The first two-node attempt ran the identical
+# 1996-2026 range on both machines and produced 99.8% overlapping document sets, so
+# disjointness here is the whole reason two nodes are worth running.
+#
+# Citations are empty in these records because the crawl processes loaded the parser
+# before the PMC JATS bibliography reader existed. Fill them with:
+#
+#   medrag backfill-citations
+#
+# Costed at ~2,776 efetch requests with no esearch, against ~5 h for a re-crawl.
+paths:
+  data_root: data/pmcmerged
+
+acquire:
+  source: pmc
+  query: '"open access"[filter] AND "randomized controlled trial"[pt]'
+  lang: english
+  min_date: "1996/01/01"
+  max_date: "2026/12/31"
+  max_records: 900000
+  fetch_batch: 200
+  max_requests_per_second: 5.0
+  api_key: null
+  email: null
+  shard_size: 5000
+
+chunk:
+  strategy: section
+  target_tokens: 320
+  max_tokens: 512
+  overlap_tokens: 64
+  min_tokens: 48

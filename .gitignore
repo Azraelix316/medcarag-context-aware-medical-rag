@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+
+# Corpus, index, and run artifacts: large and regenerable via
+# scripts/run_pipeline.sh. Only small manifests are worth versioning, and those
+# live under data/runs/.
+/data/
+/data_*/
+logs/*.log
+logs/*.out
+
+# Local config overrides and secrets
+.env
+configs/local.yaml
+
+# Editor / OS noise
+.DS_Store
+*.swp
+.idea/
+.vscode/
+logs/pipeline.pid

@@ -1,0 +1,28 @@
+{
+  "part": "graph",
+  "index_dir": "data/pmcexpanded/index",
+  "seed": 20261028,
+  "elapsed_s": 169.8,
+  "n_nodes": 109606341,
+  "store_rows": 109606341,
+  "indptr_monotonic": true,
+  "indptr_end_matches": true,
+  "sampled_nodes": 3000,
+  "edges_checked": 28758,
+  "unreciprocated": 0,
+  "n_edges": 520554598,
+  "edges_per_node": 9.5,
+  "max_degree": 2141,
+  "n_documents": 4044247,
+  "n_isolated": 31759,
+  "bytes": 9270432256,
+  "degree_by_kind": {
+    "": 2.545,
+    "references": 2.475,
+    "background": 2.597,
+    "results": 9.65,
+    "methods": 10.004,
+    "discussion": 19.346,
+    "conclusions": 20.086
+  }
+}

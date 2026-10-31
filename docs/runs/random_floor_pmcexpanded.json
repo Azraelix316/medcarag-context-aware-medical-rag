@@ -1,0 +1,67 @@
+{
+  "n_queries": 2000,
+  "seed": 7,
+  "store_rows": 109606341,
+  "readiness": {
+    "sparse": {
+      "n_queries": 2000,
+      "n_found_gold": 1212,
+      "n_ready": 283,
+      "n_quantified": 470,
+      "n_with_population": 492,
+      "n_with_caveat": 188,
+      "n_with_benefit": 137,
+      "readiness": 0.1415,
+      "quantification_rate": 0.235,
+      "population_rate": 0.246,
+      "caveat_rate": 0.094,
+      "benefit_rate": 0.0685,
+      "bare_rate": 0.371
+    },
+    "random@sparse": {
+      "n_queries": 2000,
+      "n_found_gold": 0,
+      "n_ready": 0,
+      "n_quantified": 0,
+      "n_with_population": 0,
+      "n_with_caveat": 0,
+      "n_with_benefit": 0,
+      "readiness": 0.0,
+      "quantification_rate": 0.0,
+      "population_rate": 0.0,
+      "caveat_rate": 0.0,
+      "benefit_rate": 0.0,
+      "bare_rate": 0.0
+    },
+    "pagectx": {
+      "n_queries": 2000,
+      "n_found_gold": 1315,
+      "n_ready": 558,
+      "n_quantified": 795,
+      "n_with_population": 760,
+      "n_with_caveat": 355,
+      "n_with_benefit": 289,
+      "readiness": 0.279,
+      "quantification_rate": 0.3975,
+      "population_rate": 0.38,
+      "caveat_rate": 0.1775,
+      "benefit_rate": 0.1445,
+      "bare_rate": 0.26
+    },
+    "random@pagectx": {
+      "n_queries": 2000,
+      "n_found_gold": 1,
+      "n_ready": 0,
+      "n_quantified": 0,
+      "n_with_population": 1,
+      "n_with_caveat": 0,
+      "n_with_benefit": 0,
+      "readiness": 0.0,
+      "quantification_rate": 0.0,
+      "population_rate": 0.0005,
+      "caveat_rate": 0.0,
+      "benefit_rate": 0.0,
+      "bare_rate": 0.0005
+    }
+  }
+}

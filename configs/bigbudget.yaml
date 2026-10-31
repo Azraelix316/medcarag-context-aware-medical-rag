@@ -1,0 +1,18 @@
+# Dependency-expansion budget at the knee of the curve, for the answer-side test.
+#
+# Falsifier 15 swept the budget and found the shipped 5 x 2 (10 added passages) captures
+# less than half the passage-side gain available: readiness 0.1075 against 0.2550 at
+# 10 x 12, caveat provision 0.1000 against 0.2500. But every number there is passage-side,
+# and Falsifier 11 measured caveat transmission at 0.00 -- so the sweep says the
+# mechanism is under-configured relative to the metrics this repository measures, and
+# says nothing about whether a bigger candidate set helps a reader.
+#
+# This config exists to run the read test at the larger budget and find out. It changes
+# the expansion budget and nothing else: same corpus, same index, same queries, same
+# seed in the driver.
+#
+# seeds x per_seed where seed count cannot exceed top_k=10, so 10 is the maximum
+# reachable and 12 is the per-seed dial doing the work.
+fusion:
+  context_seeds: 10
+  context_per_seed: 12

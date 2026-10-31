@@ -1,0 +1,393 @@
+{
+  "n_queries": 300,
+  "arms": [
+    "sparse",
+    "pagectx",
+    "randsec@pagectx"
+  ],
+  "seed": 7,
+  "generator_endpoint": "http://127.0.0.1:8081/v1/chat/completions",
+  "workers": 1,
+  "prompt_chars": 5500,
+  "input": {
+    "sparse": {
+      "n_queries": 300,
+      "n_found_gold": 183,
+      "n_ready": 44,
+      "n_quantified": 71,
+      "n_with_population": 80,
+      "n_with_caveat": 29,
+      "n_with_benefit": 27,
+      "readiness": 0.1467,
+      "quantification_rate": 0.2367,
+      "population_rate": 0.2667,
+      "caveat_rate": 0.0967,
+      "benefit_rate": 0.09,
+      "bare_rate": 0.3733
+    },
+    "pagectx": {
+      "n_queries": 300,
+      "n_found_gold": 193,
+      "n_ready": 80,
+      "n_quantified": 128,
+      "n_with_population": 112,
+      "n_with_caveat": 58,
+      "n_with_benefit": 55,
+      "readiness": 0.2667,
+      "quantification_rate": 0.4267,
+      "population_rate": 0.3733,
+      "caveat_rate": 0.1933,
+      "benefit_rate": 0.1833,
+      "bare_rate": 0.2167
+    },
+    "randsec@pagectx": {
+      "n_queries": 300,
+      "n_found_gold": 193,
+      "n_ready": 94,
+      "n_quantified": 132,
+      "n_with_population": 122,
+      "n_with_caveat": 55,
+      "n_with_benefit": 49,
+      "readiness": 0.3133,
+      "quantification_rate": 0.44,
+      "population_rate": 0.4067,
+      "caveat_rate": 0.1833,
+      "benefit_rate": 0.1633,
+      "bare_rate": 0.2033
+    }
+  },
+  "output": {
+    "sparse": {
+      "n": 300,
+      "produced": 1.0,
+      "rate": 0.33,
+      "population": 0.1933,
+      "caveat": 0.01,
+      "benefit": 0.0333,
+      "declined": 0.0,
+      "ready": 0.14,
+      "grounded_rate": 0.1133,
+      "grounded_ready": 0.05
+    },
+    "pagectx": {
+      "n": 300,
+      "produced": 1.0,
+      "rate": 0.34,
+      "population": 0.2067,
+      "caveat": 0.0033,
+      "benefit": 0.0267,
+      "declined": 0.0,
+      "ready": 0.1467,
+      "grounded_rate": 0.16,
+      "grounded_ready": 0.0667
+    },
+    "randsec@pagectx": {
+      "n": 300,
+      "produced": 1.0,
+      "rate": 0.3533,
+      "population": 0.1867,
+      "caveat": 0.01,
+      "benefit": 0.0367,
+      "declined": 0.0,
+      "ready": 0.1267,
+      "grounded_rate": 0.1667,
+      "grounded_ready": 0.0567
+    }
+  },
+  "paired": {
+    "pagectx vs sparse": {
+      "ready": {
+        "base": 0.14,
+        "arm": 0.1467,
+        "delta": 0.0067,
+        "ci95": [
+          -0.03,
+          0.0433
+        ],
+        "arm_only": 16,
+        "base_only": 14,
+        "p_mcnemar": 0.855535551905632,
+        "p_holm": 1.0
+      },
+      "has_rate": {
+        "base": 0.33,
+        "arm": 0.34,
+        "delta": 0.01,
+        "ci95": [
+          -0.0433,
+          0.0667
+        ],
+        "arm_only": 36,
+        "base_only": 33,
+        "p_mcnemar": 0.8099490529189247,
+        "p_holm": 1.0
+      },
+      "has_population": {
+        "base": 0.1933,
+        "arm": 0.2067,
+        "delta": 0.0133,
+        "ci95": [
+          -0.03,
+          0.0567
+        ],
+        "arm_only": 23,
+        "base_only": 19,
+        "p_mcnemar": 0.6439689563703723,
+        "p_holm": 1.0
+      },
+      "has_caveat": {
+        "base": 0.01,
+        "arm": 0.0033,
+        "delta": -0.0067,
+        "ci95": [
+          -0.02,
+          0.0067
+        ],
+        "arm_only": 1,
+        "base_only": 3,
+        "p_mcnemar": 0.625,
+        "p_holm": 1.0
+      },
+      "has_benefit": {
+        "base": 0.0333,
+        "arm": 0.0267,
+        "delta": -0.0067,
+        "ci95": [
+          -0.0333,
+          0.02
+        ],
+        "arm_only": 7,
+        "base_only": 9,
+        "p_mcnemar": 0.803619384765625,
+        "p_holm": 1.0
+      },
+      "grounded_rate": {
+        "base": 0.1133,
+        "arm": 0.16,
+        "delta": 0.0467,
+        "ci95": [
+          0.0033,
+          0.09
+        ],
+        "arm_only": 30,
+        "base_only": 16,
+        "p_mcnemar": 0.054076031858869555,
+        "p_holm": 1.0
+      },
+      "grounded_ready": {
+        "base": 0.05,
+        "arm": 0.0667,
+        "delta": 0.0167,
+        "ci95": [
+          -0.0133,
+          0.0467
+        ],
+        "arm_only": 13,
+        "base_only": 8,
+        "p_mcnemar": 0.38331031799316406,
+        "p_holm": 1.0
+      }
+    },
+    "randsec@pagectx vs sparse": {
+      "ready": {
+        "base": 0.14,
+        "arm": 0.1267,
+        "delta": -0.0133,
+        "ci95": [
+          -0.05,
+          0.0233
+        ],
+        "arm_only": 14,
+        "base_only": 18,
+        "p_mcnemar": 0.5966148958541453,
+        "p_holm": 1.0
+      },
+      "has_rate": {
+        "base": 0.33,
+        "arm": 0.3533,
+        "delta": 0.0233,
+        "ci95": [
+          -0.03,
+          0.0767
+        ],
+        "arm_only": 38,
+        "base_only": 31,
+        "p_mcnemar": 0.4703685318581444,
+        "p_holm": 1.0
+      },
+      "has_population": {
+        "base": 0.1933,
+        "arm": 0.1867,
+        "delta": -0.0067,
+        "ci95": [
+          -0.0533,
+          0.0367
+        ],
+        "arm_only": 23,
+        "base_only": 25,
+        "p_mcnemar": 0.8854334972865132,
+        "p_holm": 1.0
+      },
+      "has_caveat": {
+        "base": 0.01,
+        "arm": 0.01,
+        "delta": 0.0,
+        "ci95": [
+          -0.0167,
+          0.0167
+        ],
+        "arm_only": 3,
+        "base_only": 3,
+        "p_mcnemar": 1.0,
+        "p_holm": 1.0
+      },
+      "has_benefit": {
+        "base": 0.0333,
+        "arm": 0.0367,
+        "delta": 0.0033,
+        "ci95": [
+          -0.0233,
+          0.03
+        ],
+        "arm_only": 9,
+        "base_only": 8,
+        "p_mcnemar": 1.0,
+        "p_holm": 1.0
+      },
+      "grounded_rate": {
+        "base": 0.1133,
+        "arm": 0.1667,
+        "delta": 0.0533,
+        "ci95": [
+          0.01,
+          0.0967
+        ],
+        "arm_only": 30,
+        "base_only": 14,
+        "p_mcnemar": 0.022628841205914796,
+        "p_holm": 0.4752056653242107
+      },
+      "grounded_ready": {
+        "base": 0.05,
+        "arm": 0.0567,
+        "delta": 0.0067,
+        "ci95": [
+          -0.02,
+          0.0333
+        ],
+        "arm_only": 10,
+        "base_only": 8,
+        "p_mcnemar": 0.8145294189453125,
+        "p_holm": 1.0
+      }
+    },
+    "pagectx vs randsec@pagectx": {
+      "ready": {
+        "base": 0.1267,
+        "arm": 0.1467,
+        "delta": 0.02,
+        "ci95": [
+          -0.01,
+          0.05
+        ],
+        "arm_only": 14,
+        "base_only": 8,
+        "p_mcnemar": 0.28627872467041016,
+        "p_holm": 1.0
+      },
+      "has_rate": {
+        "base": 0.3533,
+        "arm": 0.34,
+        "delta": -0.0133,
+        "ci95": [
+          -0.0533,
+          0.0267
+        ],
+        "arm_only": 16,
+        "base_only": 20,
+        "p_mcnemar": 0.617719317029696,
+        "p_holm": 1.0
+      },
+      "has_population": {
+        "base": 0.1867,
+        "arm": 0.2067,
+        "delta": 0.02,
+        "ci95": [
+          -0.0167,
+          0.0567
+        ],
+        "arm_only": 18,
+        "base_only": 12,
+        "p_mcnemar": 0.361594608053565,
+        "p_holm": 1.0
+      },
+      "has_caveat": {
+        "base": 0.01,
+        "arm": 0.0033,
+        "delta": -0.0067,
+        "ci95": [
+          -0.0167,
+          0.0
+        ],
+        "arm_only": 0,
+        "base_only": 2,
+        "p_mcnemar": 0.5,
+        "p_holm": 1.0
+      },
+      "has_benefit": {
+        "base": 0.0367,
+        "arm": 0.0267,
+        "delta": -0.01,
+        "ci95": [
+          -0.0333,
+          0.0133
+        ],
+        "arm_only": 5,
+        "base_only": 8,
+        "p_mcnemar": 0.5810546875,
+        "p_holm": 1.0
+      },
+      "grounded_rate": {
+        "base": 0.1667,
+        "arm": 0.16,
+        "delta": -0.0067,
+        "ci95": [
+          -0.0433,
+          0.03
+        ],
+        "arm_only": 16,
+        "base_only": 18,
+        "p_mcnemar": 0.8641662404406816,
+        "p_holm": 1.0
+      },
+      "grounded_ready": {
+        "base": 0.0567,
+        "arm": 0.0667,
+        "delta": 0.01,
+        "ci95": [
+          -0.0167,
+          0.0333
+        ],
+        "arm_only": 9,
+        "base_only": 6,
+        "p_mcnemar": 0.60723876953125,
+        "p_holm": 1.0
+      }
+    }
+  },
+  "caveat_cross_tab": {
+    "sparse": {
+      "input_caveat_queries": 29,
+      "answer_caveat_queries": 1
+    },
+    "pagectx": {
+      "input_caveat_queries": 58,
+      "answer_caveat_queries": 0
+    },
+    "randsec@pagectx": {
+      "input_caveat_queries": 55,
+      "answer_caveat_queries": 2
+    }
+  },
+  "elapsed_s": 0.7
+}

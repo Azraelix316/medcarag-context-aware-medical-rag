@@ -1,0 +1,48 @@
+paths:
+  # A bounded, representative slice of the expanded PMC corpus, indexed so the query
+  # pool can grow past the 240 queries with full-text gold that pmcmerged supports.
+  #
+  # Bounded because embedding does not scale to the whole corpus at the measured rate:
+  # 4,044,247 documents at 29.1 chunks/doc is 118M rows, and at the 300 rows/s four GPUs
+  # actually deliver that is 109 hours. A 300,000-document slice is 8.7M rows, about
+  # 8 hours, which is a job that finishes.
+  #
+  # Representative because a stride sample within each publication year was taken rather
+  # than a prefix. The crawl lands documents in date order, so "the first 300,000" would
+  # be almost entirely the oldest years -- and those are the thinnest for section
+  # structure, 45.0% carrying a usable body in 1995 against 100.0% in 2018. A prefix would
+  # have selected the worst of the corpus for the exact property the dependency graph
+  # needs. See scripts/sample_corpus.py.
+  data_root: data/pmcsample
+  index_dir: data/pmcsample/index
+
+acquire:
+  # Already crawled. Recorded only so the chunker and indexer agree on the source field
+  # and the publication-type vocabulary.
+  source: pmc
+  query: '"open access"[filter]'
+  lang: english
+
+chunk:
+  # Identical to pmcmerged's, so chunks from the two indexes are directly comparable and
+  # a section kind means the same thing in both.
+  strategy: section
+  target_tokens: 320
+  max_tokens: 512
+  overlap_tokens: 64
+  min_tokens: 48
+
+embed:
+  model_name: BAAI/bge-small-en-v1.5
+  query_prefix: "Represent this sentence for searching relevant passages: "
+  pooling: cls
+  normalize: true
+  batch_size: 256
+  block_size: 20000
+  max_seq_length: 320
+  device: auto
+  fp16: true
+  dim: 384
+
+rerank:
+  enabled: false

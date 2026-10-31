@@ -1,0 +1,19 @@
+paths:
+  data_root: data_smoke
+acquire:
+  source: pubmed
+  query: "randomized controlled trial[pt] AND (\"2024\"[dp] : \"2025\"[dp])"
+  min_date: "2024/01/01"
+  max_date: "2025/12/31"
+  max_records: 300
+  fetch_batch: 100
+  max_requests_per_second: 3.0
+  shard_size: 200
+chunk:
+  strategy: section
+  target_tokens: 320
+embed:
+  model_name: BAAI/bge-small-en-v1.5
+  batch_size: 128
+rerank:
+  enabled: false

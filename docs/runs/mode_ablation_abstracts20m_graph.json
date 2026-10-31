@@ -1,0 +1,165 @@
+{
+  "n_queries": 2000,
+  "section_composition": {
+    "sparse": {
+      "share_of_gold_passages_by_kind": {
+        "background": 0.8295,
+        "methods": 0.0279,
+        "results": 0.0417,
+        "conclusions": 0.0701,
+        "(none)": 0.0292,
+        "discussion": 0.0017
+      },
+      "counts_by_kind": {
+        "background": 5316,
+        "conclusions": 449,
+        "methods": 179,
+        "results": 267,
+        "(none)": 187,
+        "discussion": 11
+      }
+    },
+    "graph": {
+      "share_of_gold_passages_by_kind": {
+        "background": 0.822,
+        "methods": 0.0854,
+        "results": 0.0639,
+        "conclusions": 0.0066,
+        "(none)": 0.0218,
+        "discussion": 0.0003
+      },
+      "counts_by_kind": {
+        "background": 14095,
+        "(none)": 374,
+        "conclusions": 113,
+        "methods": 1464,
+        "results": 1096,
+        "discussion": 5
+      }
+    },
+    "hybrid3": {
+      "share_of_gold_passages_by_kind": {
+        "background": 0.8782,
+        "methods": 0.0404,
+        "results": 0.034,
+        "conclusions": 0.0252,
+        "(none)": 0.0216,
+        "discussion": 0.0006
+      },
+      "counts_by_kind": {
+        "background": 9231,
+        "results": 357,
+        "conclusions": 265,
+        "methods": 425,
+        "(none)": 227,
+        "discussion": 6
+      }
+    }
+  },
+  "top_k": 10,
+  "index_dir": "data/abstracts20m/index",
+  "page_index_documents": 20532828,
+  "readiness": {
+    "sparse": {
+      "n_queries": 2000,
+      "n_found_gold": 1498,
+      "n_ready": 311,
+      "n_quantified": 499,
+      "n_with_population": 616,
+      "n_with_caveat": 140,
+      "n_with_benefit": 158,
+      "readiness": 0.1555,
+      "quantification_rate": 0.2495,
+      "population_rate": 0.308,
+      "caveat_rate": 0.07,
+      "benefit_rate": 0.079,
+      "bare_rate": 0.4995
+    },
+    "graph": {
+      "n_queries": 2000,
+      "n_found_gold": 1866,
+      "n_ready": 989,
+      "n_quantified": 1249,
+      "n_with_population": 1303,
+      "n_with_caveat": 402,
+      "n_with_benefit": 423,
+      "readiness": 0.4945,
+      "quantification_rate": 0.6245,
+      "population_rate": 0.6515,
+      "caveat_rate": 0.201,
+      "benefit_rate": 0.2115,
+      "bare_rate": 0.3085
+    },
+    "hybrid3": {
+      "n_queries": 2000,
+      "n_found_gold": 1896,
+      "n_ready": 504,
+      "n_quantified": 816,
+      "n_with_population": 927,
+      "n_with_caveat": 227,
+      "n_with_benefit": 236,
+      "readiness": 0.252,
+      "quantification_rate": 0.408,
+      "population_rate": 0.4635,
+      "caveat_rate": 0.1135,
+      "benefit_rate": 0.118,
+      "bare_rate": 0.54
+    }
+  },
+  "delta_vs_sparse": {
+    "graph": {
+      "readiness": 0.339,
+      "quantification_rate": 0.375,
+      "population_rate": 0.3435,
+      "caveat_rate": 0.131,
+      "benefit_rate": 0.1325,
+      "bare_rate": -0.191
+    },
+    "hybrid3": {
+      "readiness": 0.0965,
+      "quantification_rate": 0.1585,
+      "population_rate": 0.1555,
+      "caveat_rate": 0.0435,
+      "benefit_rate": 0.039,
+      "bare_rate": 0.0405
+    }
+  },
+  "context_provision": {
+    "sparse": {
+      "n_queries": 2000,
+      "n_found_gold": 1470,
+      "n_qualified": 211,
+      "n_bare": 1259,
+      "qar": 0.1055,
+      "bar": 0.6295,
+      "sabr": 0.1435,
+      "qual_ratio": 0.0962
+    },
+    "graph": {
+      "n_queries": 2000,
+      "n_found_gold": 1866,
+      "n_qualified": 115,
+      "n_bare": 1751,
+      "qar": 0.0575,
+      "bar": 0.8755,
+      "sabr": 0.0616,
+      "qual_ratio": 0.0081
+    },
+    "hybrid3": {
+      "n_queries": 2000,
+      "n_found_gold": 1890,
+      "n_qualified": 150,
+      "n_bare": 1740,
+      "qar": 0.075,
+      "bar": 0.87,
+      "sabr": 0.0794,
+      "qual_ratio": 0.0363
+    }
+  },
+  "identical_to_sparse": {
+    "graph": false,
+    "hybrid3": false
+  },
+  "unavailable": {},
+  "elapsed_s": 609.1
+}

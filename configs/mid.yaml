@@ -1,0 +1,28 @@
+# Mid-scale validation config: exercises every pipeline stage end to end
+# (crawl, chunk, store, BM25, dense, benchmark, evaluate, serve) at a size that
+# finishes in minutes, so the long production run is never the first execution
+# of a code path.
+paths:
+  data_root: data_mid
+
+acquire:
+  source: pubmed
+  query: ""
+  min_date: "2018/01/01"
+  max_date: "2026/12/31"
+  max_records: 12000
+  fetch_batch: 200
+  max_requests_per_second: 3.0
+  shard_size: 2000
+
+embed:
+  batch_size: 256
+
+rerank:
+  enabled: true
+  model_name: BAAI/bge-reranker-base
+
+evaluation:
+  metrics_at_k: [1, 3, 5, 10, 20, 100]
+  sample_size: 400
+  seed: 13

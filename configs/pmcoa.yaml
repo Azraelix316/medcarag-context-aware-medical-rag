@@ -1,0 +1,25 @@
+# PMC Open Access full text, restricted to randomised trials.
+#
+# This is where the contextual-contamination add-ons belong. Dependency structure
+# and context provision operate on Methods/Results/Discussion sections, and
+# abstracts have weak ones; PMC OA supplies genuine section structure. Paying for
+# page or context embeddings across 20M abstract-only documents would buy nothing
+# the metric can measure.
+#
+# has_text_ml[filter] restricts to full text with machine-readable markup, which
+# is what makes section parsing possible at all.
+paths:
+  data_root: data/pmcoa
+
+acquire:
+  source: pmc
+  query: '"open access"[filter] AND "randomized controlled trial"[pt]'
+  lang: english
+  min_date: "1996/01/01"
+  max_date: "2026/12/31"
+  max_records: 900000
+  fetch_batch: 200
+  max_requests_per_second: 10.0
+  api_key: null
+  email: null
+  shard_size: 5000

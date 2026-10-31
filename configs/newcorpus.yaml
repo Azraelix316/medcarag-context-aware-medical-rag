@@ -1,0 +1,24 @@
+# Corpus with populated citation fields, for the label-regime comparison.
+#
+# The 624K production corpus predates the citation-parser fix and has 0%
+# citations, so citation-derived gold cannot be built from it. This index covers
+# 930,392 documents crawled after the fix (53-55% carry reference lists), which is
+# what makes the label-agreement measurement possible over one document universe.
+paths:
+  data_root: data/newcorpus
+
+acquire:
+  source: pubmed
+  lang: english
+
+chunk:
+  target_tokens: 256
+  max_tokens: 384
+
+embed:
+  batch_size: 256
+  max_seq_length: 320
+
+
+rerank:
+  enabled: false

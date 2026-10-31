@@ -1,0 +1,245 @@
+[
+  {
+    "question": "Does SGLT2 inhibitor therapy reduce heart failure hospitalization in patients with type 2 diabetes?",
+    "strategy": "single",
+    "multi_hop": false,
+    "sub_queries": [
+      "Does SGLT2 inhibitor therapy reduce heart failure hospitalization in patients with type 2 diabetes?",
+      "cardiac failure",
+      "congestive heart failure",
+      "CHF"
+    ],
+    "latency_ms": 407.9,
+    "top": [
+      {
+        "title": "Glucose cotransporter-2 inhibitors on mortality and hospitalization in heart failure patients: a comprehensive meta-analysis.",
+        "journal": "Frontiers in endocrinology",
+        "year": 2026,
+        "citation": "Glucose cotransporter-2 inhibitors on mortality and hospitalization in heart failure patients: a comprehensive meta-analysis. (Frontiers in endocrinology, 2026) [PMID:42211456]",
+        "sources": [
+          "dense",
+          "sparse"
+        ],
+        "score": 0.032,
+        "section": "Conclusions"
+      },
+      {
+        "title": "Sodium-Glucose Cotransporter-2 Inhibitors in Patients With Heart Failure : A Systematic Review and Meta-analysis.",
+        "journal": "Annals of internal medicine",
+        "year": 2022,
+        "citation": "Sodium-Glucose Cotransporter-2 Inhibitors in Patients With Heart Failure : A Systematic Review and Meta-analysis. (Annals of internal medicine, 2022) [PMID:35404670]",
+        "sources": [
+          "dense",
+          "sparse"
+        ],
+        "score": 0.0313,
+        "section": "Conclusion"
+      },
+      {
+        "title": "Dapagliflozin in Patients with Heart Failure and Reduced Ejection Fraction.",
+        "journal": "The New England journal of medicine",
+        "year": 2019,
+        "citation": "Dapagliflozin in Patients with Heart Failure and Reduced Ejection Fraction. (The New England journal of medicine, 2019) [PMID:31535829]",
+        "sources": [
+          "dense",
+          "sparse"
+        ],
+        "score": 0.0305,
+        "section": "Background"
+      }
+    ]
+  },
+  {
+    "question": "What is the effect of probiotics on ventilator-associated pneumonia in mechanically ventilated patients?",
+    "strategy": "single",
+    "multi_hop": false,
+    "sub_queries": [
+      "What is the effect of probiotics on ventilator-associated pneumonia in mechanically ventilated patients?",
+      "the effect of probiotics on ventilator-associated pneumonia in mechanically ventilated patients"
+    ],
+    "latency_ms": 243.8,
+    "top": [
+      {
+        "title": "Preventive Effect of Probiotics on Ventilator-Associated Pneumonia: A Meta-analysis of 2428 Patients.",
+        "journal": "The Annals of pharmacotherapy",
+        "year": 2020,
+        "citation": "Preventive Effect of Probiotics on Ventilator-Associated Pneumonia: A Meta-analysis of 2428 Patients. (The Annals of pharmacotherapy, 2020) [PMID:33349001]",
+        "sources": [
+          "dense",
+          "sparse"
+        ],
+        "score": 0.0325,
+        "section": "Background"
+      },
+      {
+        "title": "Effect of a Probiotic Preparation on Ventilator-Associated Pneumonia in Critically Ill Patients Admitted to the Intensive Care Unit: A Prospective Double-Blind Randomized Controlled Trial.",
+        "journal": "Nutrition in clinical practice : official publication of the American Society for Parenteral and Enteral Nutrition",
+        "year": 2018,
+        "citation": "Effect of a Probiotic Preparation on Ventilator-Associated Pneumonia in Critically Ill Patients Admitted to the Intensive Care Unit: A Prospective Double-Blind Randomized Controlled Trial. (Nutrition in clinical practice : official publication of the American Society for Parenteral and Enteral Nutrition, 2018) [PMID:30088841]",
+        "sources": [
+          "dense",
+          "sparse"
+        ],
+        "score": 0.0323,
+        "section": "Background"
+      },
+      {
+        "title": "Role of probiotic supplementation in preventing ventilator-associated pneumonia among critically ill patients-a critical umbrella review of meta-analyses of randomized controlled trials.",
+        "journal": "Frontiers in nutrition",
+        "year": 2026,
+        "citation": "Role of probiotic supplementation in preventing ventilator-associated pneumonia among critically ill patients-a critical umbrella review of meta-analyses of randomized controlled trials. (Frontiers in nutrition, 2026) [PMID:41834846]",
+        "sources": [
+          "dense",
+          "sparse"
+        ],
+        "score": 0.0306,
+        "section": "Background"
+      }
+    ]
+  },
+  {
+    "question": "Is adjuvant chemotherapy better than observation alone after resection of pancreatic cancer?",
+    "strategy": "single",
+    "multi_hop": false,
+    "sub_queries": [
+      "Is adjuvant chemotherapy better than observation alone after resection of pancreatic cancer?",
+      "neoplasm",
+      "malignancy",
+      "carcinoma"
+    ],
+    "latency_ms": 232.3,
+    "top": [
+      {
+        "title": "Meta-analysis of adjuvant chemotherapy versus no adjuvant chemotherapy for resected stage I pancreatic cancer.",
+        "journal": "Surgery",
+        "year": 2023,
+        "citation": "Meta-analysis of adjuvant chemotherapy versus no adjuvant chemotherapy for resected stage I pancreatic cancer. (Surgery, 2023) [PMID:38160086]",
+        "sources": [
+          "dense",
+          "sparse"
+        ],
+        "score": 0.0323,
+        "section": "Background"
+      },
+      {
+        "title": "Impact of Immunotherapy after Resection of Pancreatic Cancer.",
+        "journal": "Journal of the American College of Surgeons",
+        "year": 2019,
+        "citation": "Impact of Immunotherapy after Resection of Pancreatic Cancer. (Journal of the American College of Surgeons, 2019) [PMID:30742911]",
+        "sources": [
+          "dense",
+          "sparse"
+        ],
+        "score": 0.0323,
+        "section": "Conclusions"
+      },
+      {
+        "title": "Evaluation of Adjuvant Chemotherapy in Patients With Resected Pancreatic Cancer After Neoadjuvant FOLFIRINOX Treatment.",
+        "journal": "JAMA oncology",
+        "year": 2020,
+        "citation": "Evaluation of Adjuvant Chemotherapy in Patients With Resected Pancreatic Cancer After Neoadjuvant FOLFIRINOX Treatment. (JAMA oncology, 2020) [PMID:32910170]",
+        "sources": [
+          "dense",
+          "sparse"
+        ],
+        "score": 0.0301,
+        "section": "Importance"
+      }
+    ]
+  },
+  {
+    "question": "Do ACE inhibitors prevent incident dementia?",
+    "strategy": "single",
+    "multi_hop": false,
+    "sub_queries": [
+      "Do ACE inhibitors prevent incident dementia?"
+    ],
+    "latency_ms": 227.1,
+    "top": [
+      {
+        "title": "Association between renin-angiotensin-aldosterone system inhibitors and risk of dementia: A meta-analysis.",
+        "journal": "Pharmacological research",
+        "year": 2021,
+        "citation": "Association between renin-angiotensin-aldosterone system inhibitors and risk of dementia: A meta-analysis. (Pharmacological research, 2021) [PMID:33636351]",
+        "sources": [
+          "dense",
+          "sparse"
+        ],
+        "score": 0.0315,
+        "section": "Objective"
+      },
+      {
+        "title": "Antihypertensive drug classes and risk of incident dementia: a multinational population-based cohort study.",
+        "journal": "Age and ageing",
+        "year": 2025,
+        "citation": "Antihypertensive drug classes and risk of incident dementia: a multinational population-based cohort study. (Age and ageing, 2025) [PMID:40413804]",
+        "sources": [
+          "dense",
+          "sparse"
+        ],
+        "score": 0.0263,
+        "section": "Background"
+      },
+      {
+        "title": "The association between sodium-glucose cotransporter 2 inhibitors and incident dementia: A nationwide population-based longitudinal cohort study.",
+        "journal": "Diabetes & vascular disease research",
+        "year": 2022,
+        "citation": "The association between sodium-glucose cotransporter 2 inhibitors and incident dementia: A nationwide population-based longitudinal cohort study. (Diabetes & vascular disease research, 2022) [PMID:35549730]",
+        "sources": [
+          "dense",
+          "sparse"
+        ],
+        "score": 0.0253,
+        "section": "Conclusions"
+      }
+    ]
+  },
+  {
+    "question": "What is the optimal duration of anticoagulation after atrial fibrillation ablation?",
+    "strategy": "single",
+    "multi_hop": false,
+    "sub_queries": [
+      "What is the optimal duration of anticoagulation after atrial fibrillation ablation?",
+      "the optimal duration of anticoagulation after atrial fibrillation ablation"
+    ],
+    "latency_ms": 229.3,
+    "top": [
+      {
+        "title": "Efficacy, Safety, and Net Clinical Benefit of Post-Atrial Fibrillation Ablation Anticoagulation.",
+        "journal": "Pacing and clinical electrophysiology : PACE",
+        "year": 2026,
+        "citation": "Efficacy, Safety, and Net Clinical Benefit of Post-Atrial Fibrillation Ablation Anticoagulation. (Pacing and clinical electrophysiology : PACE, 2026) [PMID:41889075]",
+        "sources": [
+          "dense",
+          "sparse"
+        ],
+        "score": 0.0311,
+        "section": "Background"
+      },
+      {
+        "title": "Duration of atrial fibrillation persistence: Implications for recurrence risk after catheter ablation and efficacy of additional substrate ablation.",
+        "journal": "Heart rhythm",
+        "year": 2024,
+        "citation": "Duration of atrial fibrillation persistence: Implications for recurrence risk after catheter ablation and efficacy of additional substrate ablation. (Heart rhythm, 2024) [PMID:38307310]",
+        "sources": [
+          "dense",
+          "sparse"
+        ],
+        "score": 0.0301,
+        "section": "Background"
+      },
+      {
+        "title": "Residual thromboembolic risk and outcomes of oral anticoagulation discontinuation after atrial fibrillation ablation: a target trial emulation.",
+        "journal": "Europace : European pacing, arrhythmias, and cardiac electrophysiology : journal of the working groups on cardiac pacing, arrhythmias, and cardiac cellular electrophysiology of the European Society of Cardiology",
+        "year": 2026,
+        "citation": "Residual thromboembolic risk and outcomes of oral anticoagulation discontinuation after atrial fibrillation ablation: a target trial emulation. (Europace : European pacing, arrhythmias, and cardiac electrophysiology : journal of the working groups on cardiac pacing, arrhythmias, and cardiac cellular electrophysiology of the European Society of Cardiology, 2026) [PMID:42550078]",
+        "sources": [
+          "dense",
+          "sparse"
+        ],
+        "score": 0.0299,
+        "section": "Aims"
+      }
+    ]
+  }
+]
