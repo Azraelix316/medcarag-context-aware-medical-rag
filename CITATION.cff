@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "If you use MedCARAG, its corpora, benchmark or code, please cite the paper below."
-title: "MedCARAG: A Full-Text Index and Benchmark for Context-Aware Medical Retrieval-Augmented Generation"
+message: "If you use MedCARAG, its corpora, benchmark or code, please cite it as below."
+title: "MedCARAG: code, benchmark and indexes for context-aware medical RAG"
 type: software
 license: Apache-2.0
 repository-code: "https://github.com/Azraelix316/medcarag"
@@ -20,13 +20,3 @@ authors:
   - family-names: "Yeah"
     given-names: "Sophia"
     affiliation: "Taipei American School"
-preferred-citation:
-  type: article
-  title: "MedCARAG: A Full-Text Index and Benchmark for Context-Aware Medical Retrieval-Augmented Generation"
-  authors:
-    - family-names: "Chang"
-      given-names: "Jared"
-    - family-names: "Yeah"
-      given-names: "Sophia"
-  year: 2026
-  notes: "Preprint; submitted to ACIIDS 2027"

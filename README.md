@@ -4,10 +4,8 @@
 generation (RAG) retrieves the context that makes a finding safe to repeat.** It
 covers the population, the comparator and the caveats, not only the matching sentence.
 
-This repository holds the code, benchmark, results and paper for:
-
-> *MedCARAG: A Full-Text Index and Benchmark for Context-Aware Medical Retrieval-Augmented
-> Generation.* Resource paper, submitted to ECIR 2027. Preprint: arXiv link to follow.
+This repository holds the code, benchmark and results. A paper describing the resource is
+under review; a link will be added here.
 
 ## What you get
 
@@ -16,7 +14,7 @@ This repository holds the code, benchmark, results and paper for:
 | Section-typed full-text index of the PubMed Central Open Access Subset (**PMC-4M**) | 4,044,247 articles, 109.6M chunks | CC BY 4.0 (derived indexes) |
 | Section-typed index of PubMed abstracts (**PubMed-20M**) | 20.5M abstracts, 48.3M chunks | CC BY 4.0 (derived indexes) |
 | Two smaller full-text indexes (PMC-RCT, PMC-300K) | 555K and 300K articles | CC BY 4.0 |
-| BM25 (segmented, exact), document vectors, chunk vectors (PubMed-20M), a same-article section graph | see `paper/` Table 1; PMC-4M is 422 GB (posted for download with the final paper; rebuildable with the builders) | CC BY 4.0 |
+| BM25 (segmented, exact), document vectors, chunk vectors (PubMed-20M), a same-article section graph | on the [`indexes-1`](https://github.com/Azraelix316/medcarag/releases/tag/indexes-1) release (229 GB, article text excluded); rebuildable with the builders | CC BY 4.0 |
 | MeSH-derived clinical benchmark: queries, qrels, PMID-to-MeSH mapping, PMID/PMCID manifests | `benchmark/` (large files on the GitHub release); 2,539 PMC-4M and 2,459 PubMed-20M queries | CC0 |
 | **Readiness** metrics: does the retrieved evidence state a rate, a population, a caveat, a benefit? | `medrag/eval/readiness.py` | Apache-2.0 |
 | Per-query result rows, significance tests, 2,700 generated answers | `docs/runs/` | CC0 |
@@ -66,19 +64,17 @@ verdict = assess_readiness(passages, gold_doc_ids)   # passages: RetrievedPassag
 verdict.ready, verdict.has_rate, verdict.has_population, verdict.has_caveat
 ```
 
-## Reproducing the paper
+## Reproducing the results
 
-| Paper item | Command | Output |
+| Result | Command | Output |
 |---|---|---|
-| Tables 2-3 (six arms, four corpora) | `scripts/run_mode_ablation.py`, then `scripts/paired_bootstrap.py` | `docs/runs/mode_ablation_*.json`, `significance_*.json` |
-| Table 4 (passage-count controls) | `scripts/matched_controls.py` | `docs/runs/matched_controls_*.json` |
+| Six retrieval arms on four corpora | `scripts/run_mode_ablation.py`, then `scripts/paired_bootstrap.py` | `docs/runs/mode_ablation_*.json`, `significance_*.json` |
+| Passage-count controls | `scripts/matched_controls.py` | `docs/runs/matched_controls_*.json` |
 | Random-retrieval floor | `scripts/random_floor.py` | `docs/runs/random_floor_*.json` |
-| Table 5 (read test) | `scripts/run_read_test_rows.py` with an OpenAI-compatible endpoint (llama.cpp `llama-server`) | `docs/runs/read_test_*.json`, `read_answers_*.jsonl` |
+| Answer-side read test | `scripts/run_read_test_rows.py` with an OpenAI-compatible endpoint (llama.cpp `llama-server`) | `docs/runs/read_test_*.json`, `read_answers_*.jsonl` |
 | Index verification and SHA-256 manifests | `scripts/release_manifest.py`, `scripts/verify_*.py` | `docs/runs/verify_*`, `release_manifest_*` |
-| All tables in the PDF | `python paper/make_tables.py` | `paper/tables.tex` |
 
-Every number in the paper's tables is generated from `docs/runs/` by
-`paper/make_tables.py`; none is typed by hand. Seeds are fixed (7).
+Every result is stored in `docs/runs/` as written by these scripts. Seeds are fixed (7).
 
 ## Building at scale
 
@@ -90,12 +86,11 @@ output to the single-process build (`tests/`).
 ## Citation
 
 ```bibtex
-@misc{pmc4m2026,
-  title  = {MedCARAG: A Full-Text Index and Benchmark for Context-Aware Medical
-            Retrieval-Augmented Generation},
+@misc{medcarag2026,
+  title  = {MedCARAG: code, benchmark and indexes for context-aware medical RAG},
   author = {Chang, Jared and Yeah, Sophia},
   year   = {2026},
-  note   = {arXiv preprint, link to follow},
+  note   = {Code, benchmark and indexes},
   url    = {https://github.com/Azraelix316/medcarag}
 }
 ```
