@@ -1,13 +1,36 @@
 {
-  "title": "MedCARAG: code, benchmark and indexes for context-aware medical RAG",
+  "title": "MedCARAG: Context-Aware Medical RAG Benchmark and Full-Text Index",
   "upload_type": "software",
   "description": "Code, benchmark (MeSH-derived queries and qrels), readiness metrics, per-query results and generated answers for MedCARAG (Medical Context-Aware RAG): section-typed indexes over 4,044,247 PubMed Central Open Access full-text articles and 20.5M PubMed abstracts, used to test context-aware retrieval against direct retrieval-augmented generation in medicine. No article text is redistributed.",
-  "creators": [{"name": "Chang, Jared", "affiliation": "Taipei American School"},
-               {"name": "Yeah, Sophia", "affiliation": "Taipei American School"}],
+  "creators": [
+    {
+      "name": "Chang, Jared",
+      "affiliation": "Taipei American School"
+    },
+    {
+      "name": "Yeah, Sophia",
+      "affiliation": "Taipei American School"
+    }
+  ],
   "license": "Apache-2.0",
-  "keywords": ["retrieval-augmented generation", "medical RAG", "biomedical information retrieval",
-               "context-aware retrieval", "PubMed Central", "test collection", "MeSH", "benchmark"],
+  "keywords": [
+    "PubMed Central full text",
+    "medical retrieval-augmented generation",
+    "context-aware medical RAG",
+    "retrieval-augmented generation",
+    "medical RAG",
+    "biomedical information retrieval",
+    "context-aware retrieval",
+    "PubMed Central",
+    "test collection",
+    "MeSH",
+    "benchmark"
+  ],
   "related_identifiers": [
-    {"identifier": "https://github.com/Azraelix316/medcarag", "relation": "isSupplementTo", "scheme": "url"}
+    {
+      "identifier": "https://github.com/Azraelix316/medcarag-context-aware-medical-rag",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
   ]
 }
