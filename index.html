@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MedCARAG: Context-Aware Medical RAG Benchmark and Full-Text Index</title>
+<meta name="description" content="MedCARAG is an open benchmark and full-text index for context-aware medical RAG: does retrieval return the population, comparator and caveats behind a clinical finding? 4M PubMed Central articles, 20.5M PubMed abstracts.">
+<meta name="keywords" content="context-aware medical RAG, medical retrieval-augmented generation, medical RAG benchmark, biomedical information retrieval, PubMed Central full text, MeSH benchmark, clinical evidence retrieval">
+<link rel="canonical" href="https://azraelix316.github.io/medcarag-context-aware-medical-rag/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MedCARAG: Context-Aware Medical RAG Benchmark and Full-Text Index">
+<meta property="og:description" content="Does medical RAG retrieve the context that makes a finding safe to repeat? An open benchmark, readiness metrics and full-text indexes over 4M PubMed Central articles.">
+<meta property="og:url" content="https://azraelix316.github.io/medcarag-context-aware-medical-rag/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Dataset",
+      "@id": "https://azraelix316.github.io/medcarag-context-aware-medical-rag/#dataset",
+      "name": "MedCARAG: Context-Aware Medical RAG Benchmark and Full-Text Index",
+      "alternateName": ["MedCARAG", "Medical Context-Aware Retrieval-Augmented Generation", "PMC-4M"],
+      "description": "MedCARAG (Medical Context-Aware Retrieval-Augmented Generation) is an open benchmark and full-text index for context-aware medical RAG. It tests whether a retriever returns the context that makes a clinical finding safe to repeat (the population, comparator and caveats from the same study), not only the passage matching the question. It includes section-typed BM25 indexes, document vectors and same-article section graphs over 4,044,247 PubMed Central Open Access full-text articles (PMC-4M) and 20.5M PubMed abstracts (PubMed-20M), a MeSH-derived clinical benchmark (2,539 and 2,459 queries with qrels), readiness metrics, per-query results for six retrieval methods with controls, and 2,700 generated answers. Article text is not redistributed; it is rebuilt from NCBI with the released scripts.",
+      "url": "https://azraelix316.github.io/medcarag-context-aware-medical-rag/",
+      "sameAs": "https://github.com/Azraelix316/medcarag-context-aware-medical-rag",
+      "keywords": ["context-aware medical RAG", "medical retrieval-augmented generation", "medical RAG benchmark", "biomedical information retrieval", "PubMed Central", "full-text test collection", "MeSH", "clinical evidence", "BM25", "dense retrieval"],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "isAccessibleForFree": true,
+      "creator": [
+        {"@type": "Person", "name": "Jared Chang", "affiliation": {"@type": "Organization", "name": "Taipei American School"}},
+        {"@type": "Person", "name": "Sophia Yeah", "affiliation": {"@type": "Organization", "name": "Taipei American School"}}
+      ],
+      "datePublished": "2026-11-01",
+      "measurementTechnique": "MeSH-derived relevance labels; pattern-based readiness detectors for rates, populations, caveats and benefits",
+      "distribution": [
+        {"@type": "DataDownload", "name": "Derived indexes (PMC-4M and PubMed-20M)", "encodingFormat": "application/octet-stream", "contentUrl": "https://github.com/Azraelix316/medcarag-context-aware-medical-rag/releases/tag/indexes-1"},
+        {"@type": "DataDownload", "name": "Identifier lists, PMID-to-MeSH mapping and MeSH qrels", "encodingFormat": "application/gzip", "contentUrl": "https://github.com/Azraelix316/medcarag-context-aware-medical-rag/releases/tag/data-1"},
+        {"@type": "DataDownload", "name": "Clinical benchmark queries and qrels", "encodingFormat": "application/json", "contentUrl": "https://github.com/Azraelix316/medcarag-context-aware-medical-rag/tree/main/benchmark"}
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "MedCARAG toolkit",
+      "description": "Code for building section-typed full-text indexes larger than RAM, context-aware retrieval modes and readiness metrics for medical RAG.",
+      "codeRepository": "https://github.com/Azraelix316/medcarag-context-aware-medical-rag",
+      "programmingLanguage": "Python",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "What is context-aware medical RAG?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Medical retrieval-augmented generation that retrieves the documents behind a match, not only the best-matching passage, so the generator also sees whom a result applies to and what limits it. That context usually sits in the same article's Methods, Discussion or Conclusions."}},
+        {"@type": "Question", "name": "How is MedCARAG different from MedRAG and MIRAGE?",
+         "acceptedAnswer": {"@type": "Answer", "text": "MIRAGE and the MedRAG toolkit benchmark medical question answering over PubMed titles and abstracts and score the final answer. MedCARAG is a separate resource built on full text that scores whether the retrieved evidence carries its qualifying context, with controls and per-query rows."}},
+        {"@type": "Question", "name": "How much does context-aware retrieval help?",
+         "acceptedAnswer": {"@type": "Answer", "text": "On 2,000 clinical queries over 4M PubMed Central articles, direct BM25 RAG returns a rate together with its population for 14.2% of queries; context-aware retrieval raises this to 27.9% and stays 5.8 points ahead of BM25 given the same number of passages."}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1d1b;--muted:#5d5c57;--line:#e3e0d8;--accent:#1f5f8b;--card:#ffffff}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--fg:#ecebe6;--muted:#a9a79f;--line:#2e2d2a;--accent:#7fb6dd;--card:#1c1c1a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:860px;margin:0 auto;padding:40px 16px 64px}
+h1{font-size:2rem;line-height:1.2;margin:0 0 12px}
+h2{font-size:1.25rem;margin:40px 0 12px;padding-top:8px;border-top:1px solid var(--line)}
+h3{font-size:1rem;margin:20px 0 4px}
+p,li{color:var(--fg)}
+.lead{font-size:1.1rem;color:var(--muted)}
+a{color:var(--accent)}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}
+.links a{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:8px 14px;text-decoration:none}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600}
+.wrap{overflow-x:auto}
+code{font-size:.9em}
+footer{margin-top:48px;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+<h1>MedCARAG: Context-Aware Medical RAG Benchmark and Full-Text Index</h1>
+<p class="lead"><strong>MedCARAG</strong> (Medical Context-Aware Retrieval-Augmented Generation) is an open benchmark, full-text index and toolkit for <strong>context-aware medical RAG</strong>. It tests whether a medical RAG system retrieves the context that makes a clinical finding safe to repeat (the population, the comparator and the caveats from the same study) as well as the passage that matches the question.</p>
+
+<div class="links">
+<a href="https://github.com/Azraelix316/medcarag-context-aware-medical-rag">Code and benchmark on GitHub</a>
+<a href="https://github.com/Azraelix316/medcarag-context-aware-medical-rag/releases/tag/indexes-1">Indexes (229 GB)</a>
+<a href="https://github.com/Azraelix316/medcarag-context-aware-medical-rag/releases/tag/data-1">Identifiers and MeSH data</a>
+</div>
+
+<h2>Why context-aware retrieval</h2>
+<p>A clinical question usually matches the <em>Results</em> of a study. The passages that make that result interpretable, such as the population and comparator in <em>Methods</em> and the caveats in <em>Discussion</em>, sit elsewhere in the same article and do not match the question, so direct RAG leaves them out and the generator receives a decontextualised fact. MedCARAG measures this at full-text scale and tests retrieval that conditions on, and returns more of, the documents behind a match.</p>
+
+<h2>What is released</h2>
+<div class="wrap"><table>
+<tr><th>Component</th><th>Size</th><th>License</th></tr>
+<tr><td>Section-typed index of the PubMed Central Open Access Subset (PMC-4M)</td><td>4,044,247 articles, 109.6M chunks</td><td>CC BY 4.0</td></tr>
+<tr><td>Section-typed index of PubMed abstracts (PubMed-20M)</td><td>20.5M abstracts, 48.3M chunks</td><td>CC BY 4.0</td></tr>
+<tr><td>MeSH-derived clinical benchmark: queries, qrels, PMID-to-MeSH mapping, identifier lists</td><td>2,539 PMC-4M and 2,459 PubMed-20M queries</td><td>CC0</td></tr>
+<tr><td>Readiness metrics: does the retrieved evidence state a rate, a population, a caveat and a benefit?</td><td>Python</td><td>Apache-2.0</td></tr>
+<tr><td>Per-query results for six retrieval methods with controls, and 2,700 generated answers</td><td>JSON</td><td>CC0</td></tr>
+<tr><td>Multi-host build tools for indexes larger than RAM</td><td>Python</td><td>Apache-2.0</td></tr>
+</table></div>
+<p>Article text is not redistributed. It is rebuilt from NCBI with the released acquisition scripts and lines up with the indexes row for row.</p>
+
+<h2>Key results</h2>
+<ul>
+<li><strong>Direct RAG is poor at qualified evidence.</strong> BM25 top-10 finds an article on the right topic for 60.6% of 2,000 clinical queries, but returns a rate together with its population for 14.2%.</li>
+<li><strong>Context-aware retrieval roughly doubles readiness</strong> to 27.9%, and stays 5.8 points ahead of BM25 given the same number of passages.</li>
+<li><strong>The section has little influence.</strong> Random passages of the retrieved articles do as well as passages chosen by section type.</li>
+<li><strong>The gain partly reaches the answer.</strong> With a Gemma 4 26B-A4B generator, answers citing a rate from the right study rise from 21% to 30%; caveats are almost never passed on.</li>
+</ul>
+
+<h2>Frequently asked questions</h2>
+<h3>What is context-aware medical RAG?</h3>
+<p>Medical retrieval-augmented generation that retrieves the documents behind a match, not only the best-matching passage, so the generator also sees whom a result applies to and what limits it.</p>
+<h3>How is MedCARAG different from MedRAG and MIRAGE?</h3>
+<p>MIRAGE and the MedRAG toolkit benchmark medical question answering over PubMed titles and abstracts and score the final answer. MedCARAG is a separate resource built on full text that scores whether the retrieved evidence carries its qualifying context, and releases full-text indexes, controls and per-query rows.</p>
+<h3>Which retrieval methods are included?</h3>
+<p>Direct BM25 RAG (<code>sparse</code>), document conditioning (<code>page</code>), sibling re-scoring (<code>bleed</code>), same-document expansion (<code>context</code>) and their combinations (<code>pagectx</code>, <code>bleedctx</code>), plus dense (bge-small-en-v1.5), hybrid and re-ranked modes.</p>
+
+<h2>Citation</h2>
+<pre><code>@misc{medcarag2026,
+  title  = {MedCARAG: Context-Aware Medical RAG Benchmark and Full-Text Index},
+  author = {Chang, Jared and Yeah, Sophia},
+  year   = {2026},
+  url    = {https://github.com/Azraelix316/medcarag-context-aware-medical-rag}
+}</code></pre>
+<p>A paper describing the resource is under review; a link will be added here.</p>
+
+<footer>Jared Chang and Sophia Yeah, Taipei American School. PubMed data courtesy of the U.S. National Library of Medicine, which does not endorse this resource.</footer>
+</main>
+</body>
+</html>

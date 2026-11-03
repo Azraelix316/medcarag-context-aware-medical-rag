@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://azraelix316.github.io/medcarag-context-aware-medical-rag/sitemap.xml
