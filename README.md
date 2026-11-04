@@ -36,6 +36,17 @@ No article text is redistributed. You rebuild the text from NCBI with the acquis
 scripts, and the derived indexes line up with it row for row. See
 [`DATA_LICENSE.md`](DATA_LICENSE.md).
 
+## Download
+
+```bash
+python scripts/fetch_release.py --corpus pmc4m --dest data/release          # PMC-4M indexes (97 GB)
+python scripts/fetch_release.py --corpus all --data --dest data/release     # both corpora and the benchmark data (229 GB)
+```
+
+The script downloads the release files, joins the split parts and checks every file
+against the SHA-256 sums in `benchmark/<corpus>/RELEASE_MANIFEST.json`. Rerun it to
+resume an interrupted download.
+
 ## Key findings
 
 On 2,000 clinical queries over 4M full-text articles:
