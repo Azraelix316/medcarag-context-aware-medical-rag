@@ -1,5 +1,7 @@
 # MedCARAG: Context-Aware Medical RAG Benchmark and Full-Text Index
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23934643.svg)](https://doi.org/10.5281/zenodo.23934643)
+
 **MedCARAG (Medical Context-Aware Retrieval-Augmented Generation)** is an open benchmark,
 full-text index and toolkit for **context-aware medical RAG**. It tests whether a medical
 RAG system retrieves the context that makes a clinical finding safe to repeat (the
@@ -145,6 +147,7 @@ large qrels are on [`data-1`](https://github.com/Azraelix316/medcarag-context-aw
   author = {Chang, Jared and Yeah, Sophia},
   year   = {2026},
   note   = {Code, benchmark and indexes},
+  doi    = {10.5281/zenodo.23934643},
   url    = {https://github.com/Azraelix316/medcarag-context-aware-medical-rag}
 }
 ```

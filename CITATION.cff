@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use MedCARAG, its corpora, benchmark or code, please cite it as below."
 title: "MedCARAG: Context-Aware Medical RAG Benchmark and Full-Text Index"
 version: "1.0"
+doi: "10.5281/zenodo.23934643"
 date-released: "2026-11-04"
 type: software
 license: Apache-2.0
